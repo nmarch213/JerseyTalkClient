@@ -4,9 +4,9 @@
   "description": "Front end Jersey talk using react js",
   "main": "index.js",
   "scripts": {
-     "start": "npm run build",
-     "build": "webpack -d && xcopy \"src/index.html\" \"dist/\" /F /Y && webpack-dev-server --content-base src/ --inline",
-     "build:prod": "webpack -p && xcopy \"src/index.html\" \"dist/\" /F /Y"
+    "start": "npm run build",
+    "build": "webpack -d && webpack-dev-server --content-base src/ --inline --hot",
+    "build:prod": "webpack -p && xcopy \"src/index.html\" \"dist/\" /F /Y"
   },
   "keywords": [
     "reactjs"
@@ -14,8 +14,13 @@
   "author": "Nicholas March",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.17.4",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "redux": "^3.6.0",
+    "redux-form": "^6.7.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
