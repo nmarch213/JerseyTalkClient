@@ -4,12 +4,19 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 
 import App from './components/app';
-import reducers from './reducers';
+import store from './reducers';
+import UniversityReviewForm from './components/universityReviewForm/UniversityReviewForm';
+import showResults from './components/universityReviewForm/showResults';
+
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
+  <Provider store={store}>
+    <div>
+      <App />
+      <h2> Yolo </h2>
+      <UniversityReviewForm onSubmit={showResults}/>
+    </div>
   </Provider>
   , document.querySelector('.container'));
