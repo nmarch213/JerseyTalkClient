@@ -22,7 +22,7 @@ const UniversityReviewFormFirstPage = (props) => {
 
 export default reduxForm({
   form: 'UniversityReviewForm',              // <------ same form name
-  destroyOnUnmount: false,     // <------ preserve form data
+  destroyOnUnmount: false,                   // <------ preserve form data
   forceUnregisterOnUnmount: true,
   validate,
 })(UniversityReviewFormFirstPage);

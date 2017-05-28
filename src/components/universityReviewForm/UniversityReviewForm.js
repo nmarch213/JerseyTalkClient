@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import UniversityReviewFormFirstPage from './UniversityReviewFormFirstPage.js'
+
+import UniversityReviewFormFirstPage from './UniversityReviewFormFirstPage.js';
+import UniversityReviewFormSecondPage from './UniversityReviewFormSecondPage.js';
+import UniversityReviewFormThirdPage from './UniversityReviewFormThirdPage.js';
 
 class UniversityReviewForm extends Component {
   constructor(props){
@@ -26,6 +29,16 @@ class UniversityReviewForm extends Component {
     return(
       <div>
         {page === 1 && <UniversityReviewFormFirstPage onSubmit={this.nextPage}/>}
+        {page === 2 &&
+          <UniversityReviewFormSecondPage
+            previousPage={this.previousPage}
+            onSubmit={this.nextPage}
+          />}
+        {page === 3 &&
+          <UniversityReviewFormThirdPage
+            previousPage={this.previousPage}
+            onSubmit={onSubmit}
+          />}
       </div>
     )
   }
