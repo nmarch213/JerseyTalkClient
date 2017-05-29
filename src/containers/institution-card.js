@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { connect }from 'react-redux'
+import { fetchCoreInformation } from '../actions/index';
 
 class InstitutionCard extends Component {
+  componentWillMount(){
+    this.props.fetchCoreInformation(this.props.params.id);
+  }
 
   renderInstitutions(){
-    return this.props.institutions.map((institution) => {
+    return this.props.institutions.map((id) => {
       return (
-        <li key={institution.id} className="list-group-item">{institution.institution}</li>
+        <li key={institutions.id} className="list-group-item">{institutions.institution}</li>
       );
     });
   }
