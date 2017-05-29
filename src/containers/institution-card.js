@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
+import { connect }from 'react-redux'
 
-export default class institutionCard extends Component {
+class InstitutionCard extends Component {
 
   renderInstitutions(){
-    return this.props.institutions.map((id) => {
+    return this.props.institutions.map((institution) => {
       return (
-        <li key={institutions.id} className="list-group-item">{institutions.school}</li>
+        <li key={institution.id} className="list-group-item">{institution.institution}</li>
       );
     });
   }
 
-
   render(){
-    return {
+    return (
       <ul className="list-group col-sm-4">
         {this.renderInstitutions()}
       </ul>
-    }
+    )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    institutions: state.institutions
+  };
+}
+
+export default connect(mapStateToProps)(InstitutionCard);

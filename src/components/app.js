@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import NavBar from './layout/nav';
 import UniversityReviewForm from './universityReviewForm/UniversityReviewForm';
 import showResults from './universityReviewForm/showResults';
+import InstitutionCard from '../containers/institution-card';
 
 export default class App extends Component {
   render() {
@@ -10,6 +11,7 @@ export default class App extends Component {
       <div>
         <NavBar />
         <UniversityReviewForm onSubmit={showResults}/>
+        <InstitutionCard />
       </div>
     );
   }

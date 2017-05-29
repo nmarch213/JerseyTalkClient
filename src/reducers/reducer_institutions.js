@@ -1,6 +1,6 @@
 export default function() {
   return [
-    { school: "UWF", id: 1},
-    { school: "UCF", id: 2}
+    { institution: "UWF", id: 1},
+    { institution: "UCF", id: 2}
   ]
 }
