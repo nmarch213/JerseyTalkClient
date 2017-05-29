@@ -23,7 +23,7 @@ export default class NavBar extends Component {
       <nav className="navbar navbar-inverse" role="navigation">
         <div className="container-fluid">
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" className="navbar-toggle" onClick={this.toggleCollapse.bind(this)}>
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
@@ -31,7 +31,7 @@ export default class NavBar extends Component {
             </button>
             <a className="navbar-brand">JerseyTalk</a>
           </div>
-          <div id="navbar" className="navbar-collapse collapse navbar-right">
+          <div id="navbar" className={"navbar-collapse navbar-right "+ navClass}>
             <ul className="nav navbar-nav">
               <li><a>Home</a></li>
               <li><a>Review A School</a></li>
