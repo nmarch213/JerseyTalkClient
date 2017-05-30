@@ -3,19 +3,19 @@ import { connect }from 'react-redux'
 import { fetchCoreInformation } from '../actions/index';
 
 class InstitutionCard extends Component {
-  componentWillMount(){
-    this.props.fetchCoreInformation(this.props.params.id);
+  componentDidMount(){
+    this.props.fetchCoreInformation();
   }
 
   renderInstitutions(){
-    return this.props.institutions.map((id) => {
       return (
-        <li key={institutions.id} className="list-group-item">{institutions.institution}</li>
+        <li className="list-group-item"></li>
       );
-    });
+
   }
 
   render(){
+    console.log(this.props.institutions);
     return (
       <ul className="list-group col-sm-4">
         {this.renderInstitutions()}
@@ -24,10 +24,9 @@ class InstitutionCard extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    institutions: state.institutions
-  };
+function mapStateToProps(state){
+
+  return { institutions: state.institutions }
 }
 
-export default connect(mapStateToProps)(InstitutionCard);
+export default connect(mapStateToProps, { fetchCoreInformation })(InstitutionCard);

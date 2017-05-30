@@ -1,11 +1,10 @@
 import { FETCH_CORE_INFORMATION } from '../actions/index';
+import _ from 'lodash';
 
-const INITIAL_STATE = { all: [], institutions: null};
-
-export default function(state = INITIAL_STATE, action) {
+export default function(state = {}, action) {
   switch(action.type){
     case FETCH_CORE_INFORMATION:
-      return { ...state, all: action.payload.data}
+      return _.mapKeys(action.payload.data, 'id');
     default:
       return state;
   }
