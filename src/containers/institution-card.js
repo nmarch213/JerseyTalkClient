@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect }from 'react-redux'
 import { fetchCoreInformation } from '../actions/index';
+import _ from 'lodash';
 
 class InstitutionCard extends Component {
   componentDidMount(){
@@ -8,18 +9,24 @@ class InstitutionCard extends Component {
   }
 
   renderInstitutions(){
-      return (
-        <li className="list-group-item"></li>
-      );
-
+      return _.map(this.props.institutions, school => {
+          return (
+            <li className="list-group-item" key={school.id}>
+              {school.institution}
+            </li>
+          )
+        });
   }
 
   render(){
     console.log(this.props.institutions);
     return (
-      <ul className="list-group col-sm-4">
-        {this.renderInstitutions()}
-      </ul>
+      <div>
+        <h3>Schools</h3>
+        <ul className="list-group">
+          {this.renderInstitutions()}
+        </ul>
+      </div>
     )
   }
 }

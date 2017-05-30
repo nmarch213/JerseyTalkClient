@@ -16,31 +16,25 @@ export default class NavBar extends Component {
 
   render(){
     const { location } = this.props;
-    const { collapsed } = this.state;
-    const navClass = collapsed ? "collapse" : "";
 
     return(
-      <nav className="navbar navbar-inverse" role="navigation">
-        <div className="container-fluid">
-          <div className="navbar-header">
-            <button type="button" className="navbar-toggle" onClick={this.toggleCollapse.bind(this)}>
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-            </button>
-            <a className="navbar-brand">JerseyTalk</a>
-          </div>
-          <div id="navbar" className={"navbar-collapse navbar-right "+ navClass}>
-            <ul className="nav navbar-nav">
-              <li><a>Home</a></li>
-              <li><a>Review A School</a></li>
-              <li><a>Ratings</a></li>
-              <li><a>About</a></li>
-              <li><a>Contact</a></li>
-            </ul>
-          </div>
+      <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button className="navbar-toggler navbar-toggler-right"  data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <a className="navbar-brand">JerseyTalk</a>
+
+        <div className="collapse navbar-collapse" id="navbarContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <a className="nav-link">Home <span className="sr-only">(current)</span></a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">Review A School<span className="sr-only">(current)</span></a>
+            </li>
+          </ul>
         </div>
+
       </nav>
     );
   }
