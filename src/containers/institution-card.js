@@ -11,9 +11,15 @@ class InstitutionCard extends Component {
   renderInstitutions(){
       return _.map(this.props.institutions, school => {
           return (
-            <li className="list-group-item" key={school.id}>
-              {school.institution}
-            </li>
+            <div className="card" key={school.id}>
+              <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap"></img>
+              <div className="card-block">
+                <h4 className="card-title">{school.institution}</h4>
+                <h5>{school.division}</h5>
+                <p className="card-text">This will be a bio on the school.</p>
+                <a className="btn btn-info btn-block">View This School!</a>
+              </div>
+            </div>
           )
         });
   }
@@ -23,9 +29,9 @@ class InstitutionCard extends Component {
     return (
       <div>
         <h3>Schools</h3>
-        <ul className="list-group">
+        <div className="card-deck">
           {this.renderInstitutions()}
-        </ul>
+        </div>
       </div>
     )
   }
