@@ -5,7 +5,6 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import App from './components/app';
 import reducers from './reducers';
 
 import FindASchool from './components/find_a_school';
