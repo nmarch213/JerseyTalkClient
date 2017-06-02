@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { IndexLink, Link } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 export default class NavBar extends Component {
   constructor(props){
@@ -27,7 +27,10 @@ export default class NavBar extends Component {
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link">Home <span className="sr-only">(current)</span></a>
+              <NavLink to="/test">
+                Home<span className="sr-only">(current)</span>
+              </NavLink>
+
             </li>
             <li className="nav-item">
               <a className="nav-link">Review A School<span className="sr-only">(current)</span></a>

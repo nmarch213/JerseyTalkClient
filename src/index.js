@@ -20,6 +20,7 @@ ReactDOM.render(
         <NavBar />
         <Switch>
           <Route path="/" component={FindASchool} />
+          <Route path="/test" component={NavBar} />
         </Switch>
       </div>
     </BrowserRouter>
