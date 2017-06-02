@@ -12,6 +12,7 @@ class InstitutionCard extends Component {
   renderInstitutions(){
       return _.map(this.props.institutions, school => {
           return (
+          <div className="col-sm-6 col-md-4 col-lg-3 col-xl-3">
             <div className="card" key={school.id}>
               <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap"></img>
               <div className="card-block">
@@ -21,12 +22,20 @@ class InstitutionCard extends Component {
                 <Link className="btn btn-primary" to={`/schools/${school.id}`}>View This School</Link>
               </div>
             </div>
+          </div>
           )
         });
   }
 
+
   render(){
-    console.log(this.props.institutions);
+
+    const { institutions } = this.props
+
+    if(!institutions){
+      return <div>Loading...</div>
+    }
+
     return (
       <div>
         <h3>Schools</h3>
