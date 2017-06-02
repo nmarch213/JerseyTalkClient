@@ -18,7 +18,7 @@ class InstitutionCard extends Component {
                 <h4 className="card-title">{school.institution}</h4>
                 <h5>{school.division}</h5>
                 <p className="card-text">This will be a bio on the school.</p>
-                <Link className="btn btn-primary" to="/schools/5926b213f744ba3bdce162a0">View This School</Link>
+                <Link className="btn btn-primary" to={`/schools/${school.id}`}>View This School</Link>
               </div>
             </div>
           )

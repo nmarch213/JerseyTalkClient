@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import reducers from './reducers';
 
-import ShowSchool from './components/show_a_school';
+import ShowSchool from './containers/show_a_school';
 import FindASchool from './components/find_a_school';
 import NavBar from './components/layout/nav';
 
