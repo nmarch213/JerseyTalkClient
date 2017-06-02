@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect }from 'react-redux'
 import { fetchCoreInformation } from '../actions/index';
 import _ from 'lodash';
+import { Link } from 'react-router-dom';
 
 class InstitutionCard extends Component {
   componentDidMount(){
@@ -17,7 +18,7 @@ class InstitutionCard extends Component {
                 <h4 className="card-title">{school.institution}</h4>
                 <h5>{school.division}</h5>
                 <p className="card-text">This will be a bio on the school.</p>
-                <a className="btn btn-info btn-block">View This School!</a>
+                <Link className="btn btn-primary" to="/schools/5926b213f744ba3bdce162a0">View This School</Link>
               </div>
             </div>
           )
