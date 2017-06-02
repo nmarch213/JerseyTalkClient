@@ -7,11 +7,13 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import reducers from './reducers';
 
+import ShowSchool from './components/show_a_school';
 import FindASchool from './components/find_a_school';
 import NavBar from './components/layout/nav';
 
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
+
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
@@ -19,8 +21,8 @@ ReactDOM.render(
       <div>
         <NavBar />
         <Switch>
+          <Route path="/schools/:id" component={ShowSchool} />
           <Route path="/" component={FindASchool} />
-          <Route path="/test" component={NavBar} />
         </Switch>
       </div>
     </BrowserRouter>
