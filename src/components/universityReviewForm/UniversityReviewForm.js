@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
-import UniversityReviewFormFirstPage from './UniversityReviewFormFirstPage.js';
-import UniversityReviewFormSecondPage from './UniversityReviewFormSecondPage.js';
-import UniversityReviewFormThirdPage from './UniversityReviewFormThirdPage.js';
+import UniversityReviewFormFirstPage from './UniversityReviewFormFirstPage';
+import UniversityReviewFormSecondPage from './UniversityReviewFormSecondPage';
+import UniversityReviewFormThirdPage from './UniversityReviewFormThirdPage';
 
 class UniversityReviewForm extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
     this.state = {
-      page: 1
-    }
+      page: 1,
+    };
   }
 
   nextPage() {
@@ -26,9 +26,9 @@ class UniversityReviewForm extends Component {
   render() {
     const { onSubmit } = this.props;
     const { page } = this.state;
-    return(
+    return (
       <div>
-        {page === 1 && <UniversityReviewFormFirstPage onSubmit={this.nextPage}/>}
+        {page === 1 && <UniversityReviewFormFirstPage onSubmit={this.nextPage} />}
         {page === 2 &&
           <UniversityReviewFormSecondPage
             previousPage={this.previousPage}
@@ -40,12 +40,12 @@ class UniversityReviewForm extends Component {
             onSubmit={onSubmit}
           />}
       </div>
-    )
+    );
   }
 }
 
 UniversityReviewForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired
-}
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default UniversityReviewForm;

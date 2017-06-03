@@ -2,25 +2,32 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default class NavBar extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state ={
+    this.state = {
       collapsed: true,
     };
   }
 
-  toggleCollapse(){
-    const collapsed = !this.state.collapsed; //inverts the collapsed toggleCollapse
-    this.setState({collapsed});
+  toggleCollapse() {
+    const collapsed = !this.state.collapsed; // inverts the collapsed toggleCollapse
+    this.setState({ collapsed });
   }
 
-  render(){
-    const { location } = this.props;
+  render() {
+    // const { location } = this.props;
 
-    return(
+    return (
       <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
-        <button className="navbar-toggler navbar-toggler-right"  data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+        <button
+          className="navbar-toggler navbar-toggler-right"
+          data-toggle="collapse"
+          data-target="#navbarContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon" />
         </button>
         <a className="navbar-brand">JerseyTalk</a>
 

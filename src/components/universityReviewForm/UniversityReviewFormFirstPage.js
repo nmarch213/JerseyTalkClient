@@ -1,11 +1,11 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import validate from './validate';
-import renderField from './renderField'
+import renderField from './renderField';
 
 const UniversityReviewFormFirstPage = (props) => {
   const { handleSubmit } = props;
-  return(
+  return (
     <form onSubmit={handleSubmit}>
       <Field
         name="institution"
@@ -17,8 +17,8 @@ const UniversityReviewFormFirstPage = (props) => {
         <button type="submit" className="next">Next</button>
       </div>
     </form>
-  )
-}
+  );
+};
 
 export default reduxForm({
   form: 'UniversityReviewForm',              // <------ same form name

@@ -1,56 +1,55 @@
-import React, { Component } from 'react';
-import { connect }from 'react-redux'
-import { fetchCoreInformation } from '../actions/index';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchCoreInformation } from '../actions/index';
+
 
 class InstitutionCard extends Component {
-  componentDidMount(){
+  componentDidMount() {
     this.props.fetchCoreInformation();
   }
 
-  renderInstitutions(){
-      return _.map(this.props.institutions, school => {
-          return (
-          <div className="col-sm-6 col-md-4 col-lg-3 col-xl-3">
-            <div className="card" key={school.id}>
-              <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="Card image cap"></img>
-              <div className="card-block">
-                <h4 className="card-title">{school.institution}</h4>
-                <h5>{school.division}</h5>
-                <hr />
-                <p className="card-text">This will be a bio on the school.</p>
-                <Link className="btn btn-primary" to={`/schools/${school.id}`}>View This School</Link>
-              </div>
-            </div>
+  renderInstitutions() {
+    return _.map(this.props.institutions, school => (
+      <div className="col-sm-6 col-md-4 col-lg-3 col-xl-3" key={school.id}>
+        <div className="card">
+          <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="Card cap" />
+          <div className="card-block">
+            <h4 className="card-title">{school.institution}</h4>
+            <h5>{school.division}</h5>
+            <hr />
+            <p className="card-text">This will be a bio on the school.</p>
+            <Link className="btn btn-primary" to={`/schools/${school.id}`}>
+                View This School
+            </Link>
           </div>
-          )
-        });
+        </div>
+      </div>
+    ));
   }
 
 
-  render(){
+  render() {
+    const { institutions } = this.props;
 
-    const { institutions } = this.props
-
-    if(!institutions){
-      return <div>Loading...</div>
+    if (!institutions) {
+      return <div>Loading...</div>;
     }
 
     return (
       <div>
-        <h3>Schools</h3>
+        <h3 className="jumbotron text-center">Schools</h3>
         <div className="card-deck">
           {this.renderInstitutions()}
         </div>
       </div>
-    )
+    );
   }
 }
 
-function mapStateToProps(state){
-
-  return { institutions: state.institutions }
+function mapStateToProps(state) {
+  return { institutions: state.institutions };
 }
 
 export default connect(mapStateToProps, { fetchCoreInformation })(InstitutionCard);

@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 import UniversityReviewForm from './universityReviewForm/UniversityReviewForm';
 import showResults from './universityReviewForm/showResults';
-import InstitutionCard from '../containers/institution-card';
+import InstitutionCard from './../containers/institution-card';
 
 class FindASchool extends Component {
-  render(){
+  render() {
     return (
       <div>
-        <UniversityReviewForm onSubmit={showResults}/>
-        <InstitutionCard  />
+        <UniversityReviewForm onSubmit={showResults} />
+        <InstitutionCard />
       </div>
     );
   }
