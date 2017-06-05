@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { fetchCoreInformation } from '../actions/index';
 
 
-class InstitutionCard extends Component {
+class IndexSchools extends Component {
   componentDidMount() {
     this.props.fetchCoreInformation();
   }
@@ -61,4 +61,4 @@ function mapStateToProps(state) {
   return { institutions: state.institutions };
 }
 
-export default connect(mapStateToProps, { fetchCoreInformation })(InstitutionCard);
+export default connect(mapStateToProps, { fetchCoreInformation })(IndexSchools);

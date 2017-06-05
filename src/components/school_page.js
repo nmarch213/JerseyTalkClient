@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ShowSchool from '../containers/show_a_school';
+import ShowSchool from '../containers/show_school';
 import UniversityReviewForm from './universityReviewForm/UniversityReviewForm';
 import showResults from './universityReviewForm/showResults';
 

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import InstitutionCard from './../containers/institution-card';
+import IndexSchools from './../containers/index_schools';
 
 class HomePage extends Component {
   render() {
     return (
       <div>
-        <InstitutionCard />
+        <IndexSchools />
       </div>
     );
   }
