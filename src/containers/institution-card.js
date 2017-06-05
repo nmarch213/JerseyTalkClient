@@ -31,7 +31,6 @@ class InstitutionCard extends Component {
 
 
   render() {
-    console.log(this.props);
     const { institutions } = this.props;
 
     if (!institutions) {
@@ -42,6 +41,10 @@ class InstitutionCard extends Component {
       <div>
         <div className="jumbotron text-center">
           <div className="form-group col-md-4 offset-md-4">
+            <h1>JerseyTalk</h1>
+            <hr />
+            <p>Tell YOUR story</p>
+            <br />
             <label htmlFor="SearchBar" className="form-control">Search For A School </label>
             <input id="SearchBar" type="text" className="form-control" />
           </div>

@@ -7,9 +7,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import reducers from './reducers';
 
-import FindASchool from './components/find_a_school';
+import HomePage from './components/home_page';
 import NavBar from './components/layout/nav';
-import ShowSchool from './containers/show_a_school';
 import SchoolReview from './components/universityReviewForm/UniversityReviewForm';
 import SchoolPage from './components/school_page';
 
@@ -25,7 +24,7 @@ ReactDOM.render(
         <Switch>
           <Route path="/schools/:id/review" component={SchoolReview} />
           <Route path="/schools/:id" component={SchoolPage} />
-          <Route path="/" exact component={FindASchool} />
+          <Route path="/" exact component={HomePage} />
         </Switch>
       </div>
     </BrowserRouter>

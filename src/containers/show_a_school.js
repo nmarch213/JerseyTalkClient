@@ -11,6 +11,7 @@ class ShowSchool extends Component {
 
   render() {
     const { school } = this.props;
+    const id = this.props.school._id;
 
     if (!school) {
       return <div>Loading...</div>;
@@ -18,7 +19,7 @@ class ShowSchool extends Component {
 
     return (
       <div className="col-6">
-        <div className="card" key={school._id}>
+        <div className="card" key={id}>
           <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="Card cap" />
           <div className="card-block text-center">
             <h4 className="card-title">{school.institution}</h4>
@@ -33,7 +34,7 @@ class ShowSchool extends Component {
             <p>Location Rating: </p>
             <p>Education Rating: </p>
 
-            <Link className="btn btn-primary" to={`/schools/${school._id}/review`}>Leave a Review!</Link>
+            <Link className="btn btn-primary" to={`/schools/${id}/review`}>Leave a Review!</Link>
           </div>
         </div>
       </div>
