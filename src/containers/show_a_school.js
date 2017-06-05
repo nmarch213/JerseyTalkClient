@@ -6,7 +6,7 @@ import { fetchSchool } from '../actions/index';
 
 class ShowSchool extends Component {
   componentDidMount() {
-    this.props.fetchSchool(this.props.match.params.id);
+    this.props.fetchSchool(this.props.variables.match.params.id);
   }
 
   render() {
@@ -17,8 +17,8 @@ class ShowSchool extends Component {
     }
 
     return (
-      <div className="container-fluid col-md-6">
-        <div className="card" key={school.id}>
+      <div className="col-6">
+        <div className="card" key={school._id}>
           <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="Card cap" />
           <div className="card-block text-center">
             <h4 className="card-title">{school.institution}</h4>
@@ -33,7 +33,7 @@ class ShowSchool extends Component {
             <p>Location Rating: </p>
             <p>Education Rating: </p>
 
-            <Link className="btn btn-primary" to={`/schools/${school.id}/review`}>Leave a Review!</Link>
+            <Link className="btn btn-primary" to={`/schools/${school._id}/review`}>Leave a Review!</Link>
           </div>
         </div>
       </div>

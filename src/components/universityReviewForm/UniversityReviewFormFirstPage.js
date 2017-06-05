@@ -6,17 +6,19 @@ import renderField from './renderField';
 const UniversityReviewFormFirstPage = (props) => {
   const { handleSubmit } = props;
   return (
-    <form onSubmit={handleSubmit}>
-      <Field
-        name="institution"
-        type="text"
-        component={renderField}
-        label="Choose Your School"
-      />
-      <div>
-        <button type="submit" className="next">Next</button>
-      </div>
-    </form>
+    <div className="container-fluid">
+      <form onSubmit={handleSubmit}>
+        <Field
+          name="institution"
+          type="text"
+          component={renderField}
+          label="Choose Your School"
+        />
+        <div>
+          <button type="submit" className="next">Next</button>
+        </div>
+      </form>
+    </div>
   );
 };
 

@@ -27,18 +27,20 @@ class UniversityReviewForm extends Component {
     const { onSubmit } = this.props;
     const { page } = this.state;
     return (
-      <div>
-        {page === 1 && <UniversityReviewFormFirstPage onSubmit={this.nextPage} />}
-        {page === 2 &&
-          <UniversityReviewFormSecondPage
-            previousPage={this.previousPage}
-            onSubmit={this.nextPage}
-          />}
-        {page === 3 &&
-          <UniversityReviewFormThirdPage
-            previousPage={this.previousPage}
-            onSubmit={onSubmit}
-          />}
+      <div className="container-fluid text-center">
+        <div className="">
+          {page === 1 && <UniversityReviewFormFirstPage onSubmit={this.nextPage} />}
+          {page === 2 &&
+            <UniversityReviewFormSecondPage
+              previousPage={this.previousPage}
+              onSubmit={this.nextPage}
+            />}
+          {page === 3 &&
+            <UniversityReviewFormThirdPage
+              previousPage={this.previousPage}
+              onSubmit={onSubmit}
+            />}
+        </div>
       </div>
     );
   }

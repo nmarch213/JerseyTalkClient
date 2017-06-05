@@ -12,7 +12,7 @@ class InstitutionCard extends Component {
 
   renderInstitutions() {
     return _.map(this.props.institutions, school => (
-      <div className="col-sm-6 col-md-4 col-lg-3 col-xl-3" key={school.id}>
+      <div className="col" key={school.id}>
         <div className="card">
           <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="Card cap" />
           <div className="card-block">
@@ -31,6 +31,7 @@ class InstitutionCard extends Component {
 
 
   render() {
+    console.log(this.props);
     const { institutions } = this.props;
 
     if (!institutions) {
@@ -39,7 +40,12 @@ class InstitutionCard extends Component {
 
     return (
       <div>
-        <h3 className="jumbotron text-center">Schools</h3>
+        <div className="jumbotron text-center">
+          <div className="form-group col-md-4 offset-md-4">
+            <label htmlFor="SearchBar" className="form-control">Search For A School </label>
+            <input id="SearchBar" type="text" className="form-control" />
+          </div>
+        </div>
         <div className="card-deck">
           {this.renderInstitutions()}
         </div>
