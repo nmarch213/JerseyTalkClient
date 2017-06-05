@@ -27,7 +27,7 @@ class UniversityReviewForm extends Component {
     const { onSubmit } = this.props;
     const { page } = this.state;
     return (
-      <div className="container-fluid text-center">
+      <div className="container-fluid text-center col">
         <div className="">
           {page === 1 && <UniversityReviewFormFirstPage onSubmit={this.nextPage} />}
           {page === 2 &&

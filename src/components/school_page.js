@@ -7,7 +7,7 @@ import showResults from './universityReviewForm/showResults';
 class SchoolPage extends Component {
   render() {
     return (
-      <div>
+      <div className="row">
         <ShowSchool variables={this.props} />
         <UniversityReviewForm onSubmit={showResults} />
       </div>
