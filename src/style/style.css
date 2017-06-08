@@ -1,0 +1,20 @@
+#navbarMain{
+  background-color: #4286f4;
+}
+
+#logo {
+  height: 75px;
+  width: 300px;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+/*#jumboHome {
+  background: url("./../images/football-field.jpg") no-repeat center center;
+  -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+}*/

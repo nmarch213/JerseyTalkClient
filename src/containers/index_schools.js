@@ -14,7 +14,7 @@ class IndexSchools extends Component {
     return _.map(this.props.institutions, school => (
       <div className="col" key={school.id}>
         <div className="card">
-          <img className="card-img-top" src="http://via.placeholder.com/150x150" alt="Card cap" />
+          <img className="card-img-top" src="https://unsplash.it/150/150/?random" alt="Card cap" />
           <div className="card-block">
             <h4 className="card-title">{school.institution}</h4>
             <h5>{school.division}</h5>
@@ -39,7 +39,7 @@ class IndexSchools extends Component {
 
     return (
       <div>
-        <div className="jumbotron text-center">
+        <div className="jumbotron text-center" id="jumboHome">
           <div className="form-group col-md-4 offset-md-4">
             <h1>JerseyTalk</h1>
             <hr />

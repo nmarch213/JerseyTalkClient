@@ -18,7 +18,7 @@ export default class NavBar extends Component {
     // const { location } = this.props;
 
     return (
-      <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
+      <nav className="navbar navbar-toggleable-md navbar-inverse" id="navbarMain">
         <button
           className="navbar-toggler navbar-toggler-right"
           data-toggle="collapse"
@@ -29,12 +29,20 @@ export default class NavBar extends Component {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <a className="navbar-brand">JerseyTalk</a>
+        <img
+          className="navbar-brand"
+          src="./src/images/logo/Jerseytalk-logo-half-jerseyWHITE.png"
+          alt="JerseyTalk Logo"
+          id="logo"
+        />
 
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <NavLink to="/">
+              <NavLink
+                to="/"
+                className="nav-link"
+              >
                 Home
               </NavLink>
 
@@ -43,8 +51,11 @@ export default class NavBar extends Component {
               <a className="nav-link">Review A School<span className="sr-only">(current)</span></a>
             </li>
           </ul>
+          <form className="form-inline my-2 my-lg-0">
+            <input className="form-control mr-sm-2" type="text" placeholder="Search" />
+            <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
         </div>
-
       </nav>
     );
   }
