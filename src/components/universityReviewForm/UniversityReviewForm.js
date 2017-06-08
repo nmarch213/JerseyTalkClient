@@ -1,5 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { fetchSchool } from '../../actions/index';
 
 import UniversityReviewFormFirstPage from './UniversityReviewFormFirstPage';
 import UniversityReviewFormSecondPage from './UniversityReviewFormSecondPage';
@@ -14,6 +17,9 @@ class UniversityReviewForm extends Component {
       page: 1,
     };
   }
+  componentDidMount() {
+    this.props.fetchSchool(this.props.variables.match.params.id);
+  }
 
   nextPage() {
     this.setState({ page: this.state.page + 1 });
@@ -26,10 +32,14 @@ class UniversityReviewForm extends Component {
   render() {
     const { onSubmit } = this.props;
     const { page } = this.state;
+    const { school } = this.props;
     return (
       <div className="container-fluid text-center col">
         <div className="">
-          {page === 1 && <UniversityReviewFormFirstPage onSubmit={this.nextPage} />}
+          {page === 1 && <UniversityReviewFormFirstPage
+            school={this.props.school}
+            onSubmit={this.nextPage}
+          />}
           {page === 2 &&
             <UniversityReviewFormSecondPage
               previousPage={this.previousPage}
@@ -50,4 +60,8 @@ UniversityReviewForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
 
-export default UniversityReviewForm;
+function mapStateToProps(state) {
+  return { school: state.school };
+}
+
+export default connect(mapStateToProps, { fetchSchool })(UniversityReviewForm);

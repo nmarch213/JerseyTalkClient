@@ -9,7 +9,7 @@ class SchoolPage extends Component {
     return (
       <div className="row">
         <ShowSchool variables={this.props} />
-        <UniversityReviewForm onSubmit={showResults} />
+        <UniversityReviewForm onSubmit={showResults} variables={this.props} />
       </div>
     );
   }

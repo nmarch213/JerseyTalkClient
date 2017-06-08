@@ -6,6 +6,7 @@ import renderField from './renderField';
 
 const UniversityReviewFormFirstPage = (props) => {
   const { handleSubmit } = props;
+  console.log(props);
   return (
     <div className="container-fluid">
       <h1>A little about you</h1>
