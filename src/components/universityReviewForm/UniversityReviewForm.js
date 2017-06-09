@@ -37,16 +37,18 @@ class UniversityReviewForm extends Component {
       <div className="container-fluid text-center col">
         <div className="">
           {page === 1 && <UniversityReviewFormFirstPage
-            school={this.props.school}
+            school={school}
             onSubmit={this.nextPage}
           />}
           {page === 2 &&
             <UniversityReviewFormSecondPage
+              school={school}
               previousPage={this.previousPage}
               onSubmit={this.nextPage}
             />}
           {page === 3 &&
             <UniversityReviewFormThirdPage
+              school={school}
               previousPage={this.previousPage}
               onSubmit={onSubmit}
             />}

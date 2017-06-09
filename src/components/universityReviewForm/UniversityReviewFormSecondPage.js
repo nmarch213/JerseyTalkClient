@@ -1,9 +1,14 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, formValueSelector } from 'redux-form';
+import { connect } from 'react-redux';
 import validate from './validate';
 
 
-const UniversityReviewFormSecondPage = (props) => {
+let UniversityReviewFormSecondPage = (props) => {
+  const {
+    sportChosen,
+  } = props;
+  console.log(props);
   const { handleSubmit, previousPage } = props;
   return (
     <form onSubmit={handleSubmit}>
@@ -84,6 +89,7 @@ const UniversityReviewFormSecondPage = (props) => {
         </Field>
       </div>
       <label htmlFor="facilityNotes">Notes</label>
+      {sportChosen}
       <div className="form-group">
         <Field
           name="facilityNotes"
@@ -99,6 +105,18 @@ const UniversityReviewFormSecondPage = (props) => {
     </form>
   );
 };
+
+const selector = formValueSelector('UniversityReviewForm');
+
+UniversityReviewFormSecondPage = connect(
+  (state) => {
+    const sportChosen = selector(state, 'sport');
+
+    return {
+      sportChosen,
+    };
+  },
+)(UniversityReviewFormSecondPage);
 
 export default reduxForm({
   form: 'UniversityReviewForm',

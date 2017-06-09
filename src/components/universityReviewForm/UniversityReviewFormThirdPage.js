@@ -4,6 +4,7 @@ import validate from './validate';
 
 
 const UniversityReviewFormThirdPage = (props) => {
+  console.log(props);
   const { handleSubmit, pristine, previousPage, submitting } = props;
   return (
     <form onSubmit={handleSubmit}>
