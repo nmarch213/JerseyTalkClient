@@ -25,19 +25,17 @@ class UniversityReviewFormFirstPage extends Component {
   }
 
   render() {
-    console.log(this.props);
-    const { sportChosen, } = this.props;
     const { school } = this.props;
     const { handleSubmit } = this.props;
 
-    const renderError = ({ meta: { touched, error } }) => touched && error ?
-      <span>{error}</span> : false;
+    // const renderError = ({ meta: { touched, error } }) => touched && error ?
+    //   <span>{error}</span> : false;
 
     if (!school) {
       return <div>Loading...</div>;
     }
     return (
-      <div className="container-fluid">
+      <div className="container-fluid form-control">
         <form onSubmit={handleSubmit}>
           <h1>Please Select The Sport You Played</h1>
 
@@ -49,14 +47,24 @@ class UniversityReviewFormFirstPage extends Component {
           >
             {this.renderSports()}
           </Field>
+          <label htmlFor="player" className="form-control">
+            Find Your Name
+            <Field
+              className="form-control"
+              id="player"
+              name="player"
+              component="select"
+            >
+              {this.renderRoster()}
+            </Field>
+          </label>
           <Field
-            className="form-control"
-            id="player"
-            name="player"
-            component="select"
-          >
-            {this.renderRoster()}
-          </Field>
+            name="playerEmail"
+            id="playerEmail"
+            component={renderField}
+            label="Email (To Verify your identity)"
+            type="email"
+          />
           <div>
             <button type="submit" className="next">Next</button>
           </div>

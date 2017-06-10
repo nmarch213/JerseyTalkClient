@@ -3,18 +3,18 @@ import { Field, reduxForm } from 'redux-form';
 import validate from './validate';
 
 
-const UniversityReviewFormThirdPage = (props) => {
-  const { handleSubmit, previousPage } = props;
+const UniversityReviewFormFourthPage = (props) => {
+  const { handleSubmit, pristine, previousPage, submitting } = props;
   return (
     <form onSubmit={handleSubmit}>
-      <h1>Grade The Education </h1>
+      <h1>Grade The Location </h1>
       <div>
         <div className="form-group">
-          <label htmlFor="educationDif">Class Difficulty?</label>
+          <label htmlFor="locationWeather">How was the weather?</label>
           <Field
             className="form-control"
-            id="educationDif"
-            name="educationDif"
+            id="locationWeather"
+            name="locationWeather"
             component="select"
           >
             <option value="1">1</option>
@@ -25,11 +25,11 @@ const UniversityReviewFormThirdPage = (props) => {
           </Field>
         </div>
         <div className="form-group">
-          <label htmlFor="educationRep">Academic Reputation?</label>
+          <label htmlFor="locationNightLife">How was the Night Life?</label>
           <Field
             className="form-control"
-            id="educationRep"
-            name="educationRep"
+            id="locationNightLife"
+            name="locationNightLife"
             component="select"
           >
             <option value="1">1</option>
@@ -40,11 +40,26 @@ const UniversityReviewFormThirdPage = (props) => {
           </Field>
         </div>
         <div className="form-group">
-          <label htmlFor="educationAssist">Tutors and Assistance?</label>
+          <label htmlFor="locationFans">How were the fans?</label>
           <Field
             className="form-control"
-            id="educationAssist"
-            name="educationAssist"
+            id="locationFans"
+            name="locationFans"
+            component="select"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </Field>
+        </div>
+        <div className="form-group">
+          <label htmlFor="locationCity">How was the city?</label>
+          <Field
+            className="form-control"
+            id="locationCity"
+            name="locationCity"
             component="select"
           >
             <option value="1">1</option>
@@ -55,12 +70,12 @@ const UniversityReviewFormThirdPage = (props) => {
           </Field>
         </div>
         <div>
-          <label htmlFor="educationNotes">
-            What more would you like to share about the education?
+          <label htmlFor="locationNotes">
+            What more would you like to share about the Location?
           </label>
           <div className="form-group">
             <Field
-              name="educationNotes"
+              name="locationNotes"
               component="textarea"
               placeholder="Additional information"
               className="form-control"
@@ -71,7 +86,7 @@ const UniversityReviewFormThirdPage = (props) => {
           <button type="button" className="previous" onClick={previousPage}>
             Previous
           </button>
-          <button type="submit" className="next">Next</button>
+          <button type="submit" disabled={pristine || submitting}>Submit</button>
         </div>
       </div>
     </form>
@@ -82,4 +97,4 @@ export default reduxForm({
   destroyOnUnmount: false, //        <------ preserve form data
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
   validate,
-})(UniversityReviewFormThirdPage);
+})(UniversityReviewFormFourthPage);

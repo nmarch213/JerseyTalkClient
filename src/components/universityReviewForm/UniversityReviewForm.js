@@ -7,6 +7,7 @@ import { fetchSchool } from '../../actions/index';
 import UniversityReviewFormFirstPage from './UniversityReviewFormFirstPage';
 import UniversityReviewFormSecondPage from './UniversityReviewFormSecondPage';
 import UniversityReviewFormThirdPage from './UniversityReviewFormThirdPage';
+import UniversityReviewFormFourthPage from './UniversityReviewFormFourthPage';
 
 class UniversityReviewForm extends Component {
   constructor(props) {
@@ -48,6 +49,12 @@ class UniversityReviewForm extends Component {
             />}
           {page === 3 &&
             <UniversityReviewFormThirdPage
+              school={school}
+              previousPage={this.previousPage}
+              onSubmit={this.nextPage}
+            />}
+          {page === 4 &&
+            <UniversityReviewFormFourthPage
               school={school}
               previousPage={this.previousPage}
               onSubmit={onSubmit}
