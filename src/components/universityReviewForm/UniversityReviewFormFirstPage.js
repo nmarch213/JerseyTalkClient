@@ -37,16 +37,25 @@ class UniversityReviewFormFirstPage extends Component {
     return (
       <div className="container-fluid form-control">
         <form onSubmit={handleSubmit}>
-          <h1>Please Select The Sport You Played</h1>
-
           <Field
-            className="form-control"
-            id="sport"
-            name="sport"
-            component="select"
-          >
-            {this.renderSports()}
-          </Field>
+            name="schoolID"
+            className="selected"
+            component="input"
+            type="radio"
+            value={school._id}
+            checked
+          />
+          <label htmlFor="player" className="form-control">
+            Select Your Sport!
+            <Field
+              className="form-control"
+              id="sport"
+              name="sport"
+              component="select"
+            >
+              {this.renderSports()}
+            </Field>
+          </label>
           <label htmlFor="player" className="form-control">
             Find Your Name
             <Field

@@ -1,10 +1,16 @@
 #navbarMain{
-  background-color: #4286f4;
+  background-color: #07397f;
 }
 
 #logo {
   height: 75px;
   width: 300px;
+}
+
+#schoolLogo {
+  height: 250px;
+  width: 250px;
+  margin: auto;
 }
 
 body {

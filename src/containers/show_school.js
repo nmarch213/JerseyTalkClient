@@ -18,9 +18,9 @@ class ShowSchool extends Component {
     }
 
     return (
-      <div className="col-6">
+      <div className="col-6 center">
         <div className="card" key={id}>
-          <img className="card-img-top" src="http://lorempixel.com/400/200/sports/" alt="Card cap" />
+          <img className="card-img-top center" id="schoolLogo" src={school.logo} alt="Card cap" />
           <div className="card-block text-center">
             <h4 className="card-title">{school.institution}</h4>
             <h5>{school.state}</h5>

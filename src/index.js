@@ -29,4 +29,4 @@ ReactDOM.render(
       </div>
     </BrowserRouter>
   </Provider>
-  , document.querySelector('.container'));
+  , document.querySelector('.app'));
