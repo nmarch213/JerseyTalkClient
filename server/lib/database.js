@@ -1,5 +1,11 @@
 const credentials = require('../credentials.js');
 const mongoose = require('mongoose');
+const aws = require('aws-sdk');
+
+
+const config = new aws.S3({
+  prodDB: process.env.MongoLab,
+});
 
 module.exports = {
 
@@ -14,7 +20,7 @@ module.exports = {
               mongoose.connect(credentials.mongo.development.connectionString, options);
               break;
           case 'production':
-              mongoose.connect(credentials.mongo.production.connectionString, options);
+              mongoose.connect(config.prodDB, options);
               break;
           default:
               throw new Error('Unknown execution environment: ' + app.get('env'));
