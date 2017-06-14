@@ -16,7 +16,6 @@ module.exports = {
               mongoose.connect(credentials.mongo.development.connectionString, options);
               break;
           case 'production':
-              console.log("Check me! " + config.prodDB);
               mongoose.connect(process.env.MongoLab, options);
               break;
           default:
