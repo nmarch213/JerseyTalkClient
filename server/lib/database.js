@@ -1,4 +1,4 @@
-const credentials = require('../credentials.js');
+
 const mongoose = require('mongoose');
 const aws = require('aws-sdk');
 
@@ -17,6 +17,7 @@ module.exports = {
       };
       switch(app.get('env')){
           case 'development':
+              const credentials = require('../credentials.js');
               mongoose.connect(credentials.mongo.development.connectionString, options);
               break;
           case 'production':
