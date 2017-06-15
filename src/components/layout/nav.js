@@ -43,36 +43,36 @@ export default class NavBar extends Component {
         />
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item float-right">
+            <li className="nav-item">
               <NavLink
                 to="/"
                 className="nav-link"
               >
-                Home
+                HOME
               </NavLink>
             </li>
-            <li className="nav-item float-right">
+            <li className="nav-item">
               <NavLink
                 to="/review"
                 className="nav-link"
               >
-                Write Review
+                WRITE REVIEW
               </NavLink>
             </li>
-            <li className="nav-item float-right">
+            <li className="nav-item">
               <NavLink
                 to="/about-us"
                 className="nav-link"
               >
-                About
+                ABOUT
               </NavLink>
             </li>
-            <li className="nav-item float-right">
+            <li className="nav-item">
               <NavLink
                 to="/contact-us"
                 className="nav-link"
               >
-                Contact
+                CONTACT
               </NavLink>
 
             </li>

@@ -18,7 +18,6 @@ body {
   background-color: #63676b;
 }
 
-
 .navbar-toggler {
   padding-top: .25em !important;
   padding-bottom: .25em !important;
@@ -30,13 +29,22 @@ body {
     border-color: rgba(0,0,0,0) !important;
 }
 
+.navbar-toggleable-md .navbar-nav .nav-link {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+}
+
+#home {
+  padding-top: 10em;
+}
+
 #navbarMain{
   background-color: #2E3192;
 }
 
 #navbarContent{
   float: right;
-  width: 600px;
+  width: auto;
   margin: auto;
 }
 
@@ -59,10 +67,6 @@ body {
   margin: auto;
 }
 
-#nav-item {
-  padding: 5px 5px;
-  margin: 10px 10px;
-}
 
 
 
