@@ -20,7 +20,7 @@ export default class NavBar extends Component {
     return (
       <nav className="navbar navbar-static-top navbar-toggleable-md navbar-inverse" id="navbarMain">
         <button
-          className="navbar-toggler navbar-toggler-right"
+          className="navbar-toggler navbar-toggler-left"
           data-toggle="collapse"
           data-target="#navbarContent"
           aria-controls="navbarSupportedContent"
