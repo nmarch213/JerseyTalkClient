@@ -27,7 +27,7 @@ export default class NavBar extends Component {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon" />
+          <i className="fa fa-bars" aria-hidden="true" />
         </button>
         <img
           className="navbar-brand hidden-md-up"

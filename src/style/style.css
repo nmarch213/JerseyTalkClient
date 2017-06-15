@@ -23,6 +23,10 @@ body {
     padding-left: 2.5rem !important;
 }
 
+.navbar-toggler {
+  margin: .75em !important;
+}
+
 #navbarMain{
   background-color: #2E3192;
 }
