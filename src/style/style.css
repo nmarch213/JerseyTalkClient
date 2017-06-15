@@ -27,6 +27,10 @@ body {
   margin: .75em !important;
 }
 
+.navbar-inverse .navbar-toggler {
+    border-color: rgba(0,0,0,0) !important;
+}
+
 #navbarMain{
   background-color: #2E3192;
 }
