@@ -1,5 +1,10 @@
 #navbarMain{
-  background-color: #07397f;
+  background-color: #2E3192;
+}
+
+#navbarContent{
+  float: right;
+  width: 400px;
 }
 
 #logo {

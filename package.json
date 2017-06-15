@@ -4,6 +4,7 @@
   "description": "Front end Jersey talk using react js",
   "main": "index.js",
   "scripts": {
+    "build": "webpack -d && webpack-dev-server --content-base src/ --inline --hot",
     "postinstall": "webpack -p",
     "start": "node index.js"
   },
