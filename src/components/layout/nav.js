@@ -31,7 +31,7 @@ export default class NavBar extends Component {
         </button>
         <img
           className="navbar-brand hidden-md-up"
-          src="/src/images/logo/jt-logo-jerseyOnly.png"
+          src="/src/images/logo/test-logo.png"
           alt="JerseyTalk Logo"
           id="smalllogo"
         />
