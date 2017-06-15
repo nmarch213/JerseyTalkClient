@@ -18,13 +18,12 @@ body {
   background-color: #63676b;
 }
 
-.navbar-toggleable-md .navbar-nav .nav-link {
-    padding-right: 2.5rem !important;
-    padding-left: 2.5rem !important;
-}
 
 .navbar-toggler {
-  margin: .75em !important;
+  padding-top: .25em !important;
+  padding-bottom: .25em !important;
+  height: 40px;
+  width: 48px;
 }
 
 .navbar-inverse .navbar-toggler {
@@ -48,8 +47,8 @@ body {
 }
 
 #smalllogo {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 48px;
   margin: auto;
 }
 
