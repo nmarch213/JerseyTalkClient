@@ -5,12 +5,21 @@
 #navbarContent{
   float: right;
   width: 600px;
+  margin: auto;
 }
 
 #logo {
   height: 60px;
   width: 275px;
+  margin: auto;
 }
+
+#smalllogo {
+  height: 60px;
+  width: 60px;
+  margin: auto;
+}
+
 
 #schoolLogo {
   height: 250px;
