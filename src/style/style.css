@@ -4,18 +4,28 @@
 
 #navbarContent{
   float: right;
-  width: 400px;
+  width: 600px;
 }
 
 #logo {
-  height: 75px;
-  width: 300px;
+  height: 60px;
+  width: 275px;
 }
 
 #schoolLogo {
   height: 250px;
   width: 250px;
   margin: auto;
+}
+
+#nav-item {
+  padding: 5px 5px;
+  margin: 10px 10px;
+}
+
+.navbar-toggleable-md .navbar-nav .nav-link {
+    padding-right: 2.5rem !important;
+    padding-left: 2.5rem !important;
 }
 
 body {
