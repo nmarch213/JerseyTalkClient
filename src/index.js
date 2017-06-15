@@ -9,6 +9,7 @@ import reducers from './reducers';
 
 import HomePage from './components/home_page';
 import NavBar from './components/layout/nav';
+import Footer from './components/layout/footer';
 import SchoolReview from './components/universityReviewForm/UniversityReviewForm';
 import SchoolPage from './components/school_page';
 
@@ -26,6 +27,7 @@ ReactDOM.render(
           <Route path="/schools/:id" component={SchoolPage} />
           <Route path="/" exact component={HomePage} />
         </Switch>
+        <Footer />
       </div>
     </BrowserRouter>
   </Provider>
