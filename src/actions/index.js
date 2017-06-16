@@ -4,7 +4,7 @@ export const FETCH_CORE_INFORMATION = 'FETCH_CORE_INFORMATION';
 export const FETCH_SCHOOL = 'FETCH_SCHOOL';
 export const CREATE_REVIEW = 'CREATE_REVIEW';
 
-const ROOT_URL = 'http://localhost:3000';
+const ROOT_URL = 'http://jerseytalkdev.herokuapp.com';
 
 export function fetchCoreInformation() {
   const request = axios.get(`${ROOT_URL}/getUniversityCoreInfo`);
