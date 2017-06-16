@@ -34,6 +34,19 @@ body {
     padding-left: 3rem !important;
 }
 
+.MockupForm {
+  padding-top: 60px;
+}
+
+#mockupSchoolLogo {
+  height: 150px;
+  width: 150px;
+}
+
+.next {
+  margin-top: 10px;
+}
+
 #home {
   padding-top: 10em;
 }

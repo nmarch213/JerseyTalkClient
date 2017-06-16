@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 import IndexSchools from './../containers/index_schools';
 import Home from './layout/home';
-import UniversityReviewForm from './universityReviewForm/UniversityReviewForm';
 import showResults from './universityReviewForm/showResults';
+import MockupForm from './mockupForm/MockupForm';
 
 class HomePage extends Component {
   render() {
     return (
       <div className="container">
         {/* <IndexSchools /> */}
-        <UniversityReviewForm onSubmit={showResults} variables={this.props} />
+        <MockupForm onSubmit={showResults} variables={this.props} />
         {/* <Home /> */}
       </div>
     );
