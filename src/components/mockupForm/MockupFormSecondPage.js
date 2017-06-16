@@ -8,7 +8,6 @@ let UniversityReviewFormSecondPage = (props) => {
   const {
     sportChosen,
   } = props;
-  console.log(props);
   const { handleSubmit, previousPage } = props;
   return (
     <form onSubmit={handleSubmit}>

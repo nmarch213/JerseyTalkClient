@@ -56,8 +56,6 @@ class UniversityReviewFormFirstPage extends Component {
             className="form-control"
             component="input"
             type="text"
-            value={school._id}
-            checked
           />
           <div>
             <button type="submit" className="next btn btn-primary">Next</button>
