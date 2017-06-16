@@ -19,7 +19,7 @@ class MockupForm extends Component {
     };
   }
   componentDidMount() {
-    this.props.fetchSchool(this.props.variables.match.params.id);
+    // this.props.fetchSchool(this.props.variables.match.params.id);
   }
 
   nextPage() {
