@@ -7,87 +7,89 @@ const UniversityReviewFormFourthPage = (props) => {
   const { handleSubmit, pristine, previousPage, submitting } = props;
   return (
     <form onSubmit={handleSubmit}>
-      <h1>Grade The Location </h1>
-      <div>
-        <div className="form-group">
-          <label htmlFor="locationWeather">How was the weather?</label>
-          <Field
-            className="form-control"
-            id="locationWeather"
-            name="locationWeather"
-            component="select"
-          >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </Field>
-        </div>
-        <div className="form-group">
-          <label htmlFor="locationNightLife">How was the Night Life?</label>
-          <Field
-            className="form-control"
-            id="locationNightLife"
-            name="locationNightLife"
-            component="select"
-          >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </Field>
-        </div>
-        <div className="form-group">
-          <label htmlFor="locationFans">How were the fans?</label>
-          <Field
-            className="form-control"
-            id="locationFans"
-            name="locationFans"
-            component="select"
-          >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </Field>
-        </div>
-        <div className="form-group">
-          <label htmlFor="locationCity">How was the city?</label>
-          <Field
-            className="form-control"
-            id="locationCity"
-            name="locationCity"
-            component="select"
-          >
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </Field>
-        </div>
-        <div>
-          <label htmlFor="locationNotes">
-            What more would you like to share about the Location?
-          </label>
-          <div className="form-group">
-            <Field
-              name="locationNotes"
-              component="textarea"
-              placeholder="Additional information"
-              className="form-control"
-            />
-          </div>
-        </div>
-        <div>
-          <button type="button" className="previous" onClick={previousPage}>
-            Previous
-          </button>
-          <button type="submit" disabled={pristine || submitting}>Submit</button>
-        </div>
+      <h1> Select Your Team </h1>
+      <p>What team did you play for?</p>
+      <Field
+        type="button"
+        component="button"
+        label="Men's Basketball"
+        className="form-control btn btn-outline-secondary sportlist"
+      >
+        Men's Basketball
+      </Field>
+      <br />
+      <Field
+        type="button"
+        component="button"
+        label="Men's Basketball"
+        className="form-control btn btn-outline-secondary sportlist"
+      >
+        Women's Basketball
+      </Field>
+      <br />
+      <Field
+        type="button"
+        component="button"
+        label="Men's Basketball"
+        className="form-control btn btn-outline-secondary sportlist"
+      >
+        Men's Soccer
+      </Field>
+      <br />
+      <Field
+        type="button"
+        component="button"
+        label="Men's Basketball"
+        className="form-control btn btn-outline-secondary sportlist"
+      >
+        Women's Soccer
+      </Field>
+      <br />
+      <Field
+        type="button"
+        component="button"
+        label="Men's Basketball"
+        className="form-control btn btn-outline-secondary sportlist"
+      >
+        Baseball
+      </Field>
+      <br />
+      <Field
+        type="button"
+        component="button"
+        label="Men's Basketball"
+        className="form-control btn btn-outline-secondary sportlist"
+      >
+        Softball
+      </Field>
+      <br />
+      <Field
+        type="button"
+        component="button"
+        label="Men's Basketball"
+        className="form-control btn btn-outline-secondary sportlist"
+      >
+        Football
+      </Field>
+      <br />
+      <Field
+        type="button"
+        component="button"
+        label="Men's Basketball"
+        className="form-control btn btn-outline-secondary sportlist"
+      >
+        Women's Volleyball
+      </Field>
+      <br />
+      <div className="row">
+        <button
+          type="button"
+          className="btn btn-outline-success previous form-control col-6"
+          onClick={previousPage}
+        >
+          Previous
+        </button>
+        <button type="submit" className="btn btn-success next form-control col-6">Next</button>
       </div>
     </form>
   );

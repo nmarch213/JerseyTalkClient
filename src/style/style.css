@@ -8,15 +8,14 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
-.footer {
-  position: absolute;
+.footer-bottom {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
   background-color: #63676b;
-  padding-top: 60px;
+  margin-top: 60px !important;
 }
 
 .navbar-toggler {
@@ -42,10 +41,6 @@ body {
 #mockupSchoolLogo {
   height: 150px;
   width: 150px;
-}
-
-.next {
-  margin-top: 10px;
 }
 
 #home {
@@ -79,6 +74,10 @@ body {
   height: 250px;
   width: 250px;
   margin: auto;
+}
+
+#sportlist {
+  margin:auto;
 }
 
 
