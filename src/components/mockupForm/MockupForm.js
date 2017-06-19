@@ -10,6 +10,7 @@ import MockupFormName from './3_MockupFormName';
 import MockupFormEmail from './4_MockupFormEmail';
 import MockupFormRival from './5_MockupFormRival';
 import MockupFormCoach from './6_MockupFormCoach';
+import MockupFormPlayForCoach from './7_MockupFormPlayForCoach';
 import MockupFormFifthPage from './MockupFormFifthPage';
 
 class MockupForm extends Component {
@@ -74,6 +75,12 @@ class MockupForm extends Component {
               previousPage={this.previousPage}
               onSubmit={this.nextPage}
             />}
+            {page === 1 &&
+              <MockupFormPlayForCoach
+                school={school}
+                previousPage={this.previousPage}
+                onSubmit={this.nextPage}
+              />}
           {page === 7 &&
             <MockupFormFifthPage
               school={school}
