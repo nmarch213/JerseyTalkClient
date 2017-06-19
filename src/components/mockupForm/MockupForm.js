@@ -8,6 +8,7 @@ import MockupFormFirstPage from './MockupFormFirstPage';
 import MockupFormSecondPage from './MockupFormSecondPage';
 import MockupFormThirdPage from './MockupFormThirdPage';
 import MockupFormFourthPage from './MockupFormFourthPage';
+import MockupFormFifthPage from './MockupFormFifthPage';
 
 class MockupForm extends Component {
   constructor(props) {
@@ -55,6 +56,12 @@ class MockupForm extends Component {
             />}
           {page === 4 &&
             <MockupFormFourthPage
+              school={school}
+              previousPage={this.previousPage}
+              onSubmit={this.nextPage}
+            />}
+          {page === 5 &&
+            <MockupFormFifthPage
               school={school}
               previousPage={this.previousPage}
               onSubmit={onSubmit}

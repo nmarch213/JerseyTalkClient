@@ -7,80 +7,14 @@ const UniversityReviewFormFourthPage = (props) => {
   const { handleSubmit, pristine, previousPage, submitting } = props;
   return (
     <form onSubmit={handleSubmit}>
-      <h1> Select Your Team </h1>
-      <p>What team did you play for?</p>
+      <h3>Please Enter your Email</h3>
       <Field
-        type="button"
-        component="button"
-        label="Men's Basketball"
-        className="form-control btn btn-outline-secondary sportlist"
-      >
-        Men's Basketball
-      </Field>
-      <br />
-      <Field
-        type="button"
-        component="button"
-        label="Men's Basketball"
-        className="form-control btn btn-outline-secondary sportlist"
-      >
-        Women's Basketball
-      </Field>
-      <br />
-      <Field
-        type="button"
-        component="button"
-        label="Men's Basketball"
-        className="form-control btn btn-outline-secondary sportlist"
-      >
-        Men's Soccer
-      </Field>
-      <br />
-      <Field
-        type="button"
-        component="button"
-        label="Men's Basketball"
-        className="form-control btn btn-outline-secondary sportlist"
-      >
-        Women's Soccer
-      </Field>
-      <br />
-      <Field
-        type="button"
-        component="button"
-        label="Men's Basketball"
-        className="form-control btn btn-outline-secondary sportlist"
-      >
-        Baseball
-      </Field>
-      <br />
-      <Field
-        type="button"
-        component="button"
-        label="Men's Basketball"
-        className="form-control btn btn-outline-secondary sportlist"
-      >
-        Softball
-      </Field>
-      <br />
-      <Field
-        type="button"
-        component="button"
-        label="Men's Basketball"
-        className="form-control btn btn-outline-secondary sportlist"
-      >
-        Football
-      </Field>
-      <br />
-      <Field
-        type="button"
-        component="button"
-        label="Men's Basketball"
-        className="form-control btn btn-outline-secondary sportlist"
-      >
-        Women's Volleyball
-      </Field>
-      <br />
+        name="school"
+        className="form-control"
+        component="input"
+        type="email"
+        label="Name"
+      />
       <div className="row">
         <button
           type="button"

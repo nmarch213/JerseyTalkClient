@@ -14,6 +14,7 @@ let UniversityReviewFormSecondPage = (props) => {
       <h1> Select Your Team </h1>
       <p>What team did you play for?</p>
       <Field
+        name="test"
         type="button"
         component="button"
         label="Men's Basketball"
@@ -23,6 +24,7 @@ let UniversityReviewFormSecondPage = (props) => {
       </Field>
       <br />
       <Field
+        name="test"
         type="button"
         component="button"
         label="Men's Basketball"
@@ -32,6 +34,7 @@ let UniversityReviewFormSecondPage = (props) => {
       </Field>
       <br />
       <Field
+        name="test"
         type="button"
         component="button"
         label="Men's Basketball"
@@ -41,6 +44,7 @@ let UniversityReviewFormSecondPage = (props) => {
       </Field>
       <br />
       <Field
+        name="test"
         type="button"
         component="button"
         label="Men's Basketball"
@@ -50,6 +54,7 @@ let UniversityReviewFormSecondPage = (props) => {
       </Field>
       <br />
       <Field
+        name="test"
         type="button"
         component="button"
         label="Men's Basketball"
@@ -59,6 +64,7 @@ let UniversityReviewFormSecondPage = (props) => {
       </Field>
       <br />
       <Field
+        name="test"
         type="button"
         component="button"
         label="Men's Basketball"
@@ -68,6 +74,7 @@ let UniversityReviewFormSecondPage = (props) => {
       </Field>
       <br />
       <Field
+        name="test"
         type="button"
         component="button"
         label="Men's Basketball"
@@ -77,6 +84,7 @@ let UniversityReviewFormSecondPage = (props) => {
       </Field>
       <br />
       <Field
+        name="test"
         type="button"
         component="button"
         label="Men's Basketball"
