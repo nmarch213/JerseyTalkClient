@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import validate from './validate';
 
 
-let UniversityReviewFormSecondPage = (props) => {
+let MockupFormSport = (props) => {
   const {
     sportChosen,
   } = props;
@@ -109,7 +109,7 @@ let UniversityReviewFormSecondPage = (props) => {
 
 const selector = formValueSelector('UniversityReviewForm');
 
-UniversityReviewFormSecondPage = connect(
+MockupFormSport = connect(
   (state) => {
     const sportChosen = selector(state, 'sport');
 
@@ -117,11 +117,11 @@ UniversityReviewFormSecondPage = connect(
       sportChosen,
     };
   },
-)(UniversityReviewFormSecondPage);
+)(MockupFormSport);
 
 export default reduxForm({
   form: 'UniversityReviewForm',
   destroyOnUnmount: false,
   forceUnregisterOnUnmount: true,
   validate,
-})(UniversityReviewFormSecondPage);
+})(MockupFormSport);

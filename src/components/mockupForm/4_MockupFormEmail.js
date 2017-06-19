@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import validate from './validate';
 
 
-const UniversityReviewFormFourthPage = (props) => {
+const MockupFormEmail = (props) => {
   const { handleSubmit, pristine, previousPage, submitting } = props;
   return (
     <form onSubmit={handleSubmit}>
@@ -33,4 +33,4 @@ export default reduxForm({
   destroyOnUnmount: false, //        <------ preserve form data
   forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
   validate,
-})(UniversityReviewFormFourthPage);
+})(MockupFormEmail);

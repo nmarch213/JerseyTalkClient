@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import validate from './validate';
 import renderField from './renderField';
 
-class MockupFormFirstPage extends Component {
+class MockupFormSchool extends Component {
   renderSports() {
     return _.map(this.props.school.sports, sport => (
       <option key={sport.ncaaId} value={sport.ncaaId}>{sport.name}</option>
@@ -68,7 +68,7 @@ class MockupFormFirstPage extends Component {
 
 const selector = formValueSelector('MockupForm');
 
-MockupFormFirstPage = connect(
+MockupFormSchool = connect(
   (state) => {
     const sportChosen = selector(state, 'sport');
 
@@ -76,11 +76,11 @@ MockupFormFirstPage = connect(
       sportChosen,
     };
   },
-)(MockupFormFirstPage);
+)(MockupFormSchool);
 
 export default reduxForm({
   form: 'MockupForm',              // <------ same form name
   destroyOnUnmount: false,                   // <------ preserve form data
   forceUnregisterOnUnmount: true,
   validate,
-})(MockupFormFirstPage);
+})(MockupFormSchool);

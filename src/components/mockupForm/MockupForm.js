@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 
 import { fetchSchool } from '../../actions/index';
 
-import MockupFormFirstPage from './MockupFormFirstPage';
-import MockupFormSecondPage from './MockupFormSecondPage';
-import MockupFormThirdPage from './MockupFormThirdPage';
-import MockupFormFourthPage from './MockupFormFourthPage';
+import MockupFormSchool from './1_MockupFormSchool';
+import MockupFormSport from './2_MockupFormSport';
+import MockupFormName from './3_MockupFormName';
+import MockupFormEmail from './4_MockupFormEmail';
 import MockupFormFifthPage from './MockupFormFifthPage';
 
 class MockupForm extends Component {
@@ -38,24 +38,24 @@ class MockupForm extends Component {
     return (
       <div className="container-fluid text-center col">
         <div className="MockupForm">
-          {page === 1 && <MockupFormFirstPage
+          {page === 1 && <MockupFormSchool
             school={school}
             onSubmit={this.nextPage}
           />}
           {page === 2 &&
-            <MockupFormSecondPage
+            <MockupFormSport
               school={school}
               previousPage={this.previousPage}
               onSubmit={this.nextPage}
             />}
           {page === 3 &&
-            <MockupFormThirdPage
+            <MockupFormName
               school={school}
               previousPage={this.previousPage}
               onSubmit={this.nextPage}
             />}
           {page === 4 &&
-            <MockupFormFourthPage
+            <MockupFormEmail
               school={school}
               previousPage={this.previousPage}
               onSubmit={this.nextPage}
