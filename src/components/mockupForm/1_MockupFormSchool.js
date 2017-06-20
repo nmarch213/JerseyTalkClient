@@ -1,39 +1,18 @@
-import _ from 'lodash';
 import React, { Component } from 'react';
-import { Field, reduxForm, formValueSelector } from 'redux-form';
-import { connect } from 'react-redux';
+import { Field, reduxForm } from 'redux-form';
 
 import validate from './validate';
-import renderField from './renderField';
 
 class MockupFormSchool extends Component {
-  renderSports() {
-    return _.map(this.props.school.sports, sport => (
-      <option key={sport.ncaaId} value={sport.ncaaId}>{sport.name}</option>
-    ));
-  }
 
-  renderRoster() {
-    const sportObject = _.keyBy(this.props.school.sports, 'ncaaId');
-
-    if (this.props.sportChosen) {
-      return _.map(sportObject[this.props.sportChosen].season[0].roster, player => (
-        <option key={player.jerseyNumber} value={player.name}>{player.name}</option>
-      ));
-    }
-    return <option value="Anonymous">Anonymous</option>;
-  }
 
   render() {
-    const { school } = this.props;
     const { handleSubmit } = this.props;
 
     // const renderError = ({ meta: { touched, error } }) => touched && error ?
     //   <span>{error}</span> : false;
 
-    if (!school) {
-      return <div>Loading...</div>;
-    }
+
     return (
       <div className="container-fluid form-control">
         <form onSubmit={handleSubmit}>
@@ -65,18 +44,6 @@ class MockupFormSchool extends Component {
     );
   }
 }
-
-const selector = formValueSelector('MockupForm');
-
-MockupFormSchool = connect(
-  (state) => {
-    const sportChosen = selector(state, 'sport');
-
-    return {
-      sportChosen,
-    };
-  },
-)(MockupFormSchool);
 
 export default reduxForm({
   form: 'MockupForm',              // <------ same form name
