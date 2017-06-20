@@ -5,9 +5,6 @@ import validate from './validate';
 
 
 let MockupFormSport = (props) => {
-  const {
-    sportChosen,
-  } = props;
   const { handleSubmit, previousPage } = props;
   return (
     <form onSubmit={handleSubmit}>
@@ -107,20 +104,8 @@ let MockupFormSport = (props) => {
   );
 };
 
-const selector = formValueSelector('UniversityReviewForm');
-
-MockupFormSport = connect(
-  (state) => {
-    const sportChosen = selector(state, 'sport');
-
-    return {
-      sportChosen,
-    };
-  },
-)(MockupFormSport);
-
 export default reduxForm({
-  form: 'UniversityReviewForm',
+  form: 'MockupForm',
   destroyOnUnmount: false,
   forceUnregisterOnUnmount: true,
   validate,
