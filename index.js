@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.static(__dirname));
 
 // Routes
-const indexRoutes = require('./server/routes/routes.js');
+// const indexRoutes = require('./server/routes/routes.js');
 
 // database configuration
 // const dbSettings = require('./server/lib/database.js');
