@@ -22,11 +22,11 @@ dbSettings.populateDBSettings(app);
 app.set('port', process.env.PORT || 3000);
 
 
-const ncaaMemberAdd = require('./server/dataCrawler/ncaaMemberAdd');
-const UniversityController = require('./server/controllers/university');
-const NCAARosterController = require('./server/dataCrawler/getNCAARoster');
-
-const uwf = "5938e256902b3714acd252a7";
+// const ncaaMemberAdd = require('./server/dataCrawler/ncaaMemberAdd');
+// const UniversityController = require('./server/controllers/university');
+// const NCAARosterController = require('./server/dataCrawler/getNCAARoster');
+//
+// const uwf = "5938e256902b3714acd252a7";
 // NCAARosterController.getTeamRosterForSpecificSport(11740, 12480, uwf);
 
 // UniversityController.findUni(uwf, 12480, "2016-2017");
@@ -34,7 +34,11 @@ const uwf = "5938e256902b3714acd252a7";
 
 // ncaaMemberAdd.getNCAASchools();
 // index routes
-app.use(indexRoutes);
+// app.use(indexRoutes);
+
+app.get("/", function(req, res){
+  res.sendFile(path.resolve(__dirname, 'index.html'));
+})
 
 app.listen(app.get('port'), function () {
   console.log('JerseyTalk Server Live at:  ' +
