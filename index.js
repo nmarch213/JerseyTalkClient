@@ -12,9 +12,9 @@ app.use(express.static(__dirname));
 const indexRoutes = require('./server/routes/routes.js');
 
 // database configuration
-const dbSettings = require('./server/lib/database.js');
-
-dbSettings.populateDBSettings(app);
+// const dbSettings = require('./server/lib/database.js');
+//
+// dbSettings.populateDBSettings(app);
 
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
