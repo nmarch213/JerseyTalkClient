@@ -15,7 +15,7 @@ class MockupFormSchool extends Component {
 
     return (
       <form onSubmit={handleSubmit}>
-        <div className="row text-center">
+        <div className="row text-center hidden-sm-down">
           <div className="container offset-2 col-4">
             <img
               alt="school Logo"
@@ -24,6 +24,20 @@ class MockupFormSchool extends Component {
             />
           </div>
           <div className="container pull-2 col-5 center">
+            <h1>Select Your School</h1>
+            <p>What school did you attend?</p>
+          </div>
+        </div>
+
+        <div className="row text-center hidden-md-up">
+          <div className="container">
+            <img
+              alt="school Logo"
+              id="mockupSchoolLogo"
+              src="http://img.clipartall.com/building-clip-art-clip-art-of-school-600_307.png"
+            />
+          </div>
+          <div className="container">
             <h1>Select Your School</h1>
             <p>What school did you attend?</p>
           </div>

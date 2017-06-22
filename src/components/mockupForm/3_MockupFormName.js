@@ -7,7 +7,7 @@ const MockupFormName = (props) => {
   const { handleSubmit, previousPage } = props;
   return (
     <form onSubmit={handleSubmit} className="container">
-      <div className="row text-center">
+      <div className="row text-center hidden-sm-down">
         <div className="container offset-2 col-4">
           <img
             alt="school Logo"
@@ -16,6 +16,19 @@ const MockupFormName = (props) => {
           />
         </div>
         <div className="container pull-2 col-5 center">
+          <h1>Please Enter your Name</h1>
+        </div>
+      </div>
+
+      <div className="row text-center hidden-md-up">
+        <div className="container">
+          <img
+            alt="school Logo"
+            id="mockupSchoolLogo"
+            src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
+          />
+        </div>
+        <div className="container">
           <h1>Please Enter your Name</h1>
         </div>
       </div>
