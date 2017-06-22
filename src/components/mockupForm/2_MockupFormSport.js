@@ -7,8 +7,20 @@ const MockupFormSport = (props) => {
   const { handleSubmit, previousPage } = props;
   return (
     <form onSubmit={handleSubmit}>
-      <h1> Select Your Team </h1>
-      <p>What team did you play for?</p>
+      <div className="row text-center">
+        <div className="container offset-2 col-4">
+          <img
+            alt="school Logo"
+            id="mockupSchoolLogo"
+            src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
+          />
+        </div>
+        <div className="container pull-2 col-5 center">
+          <h1>Select Your Team</h1>
+          <p>What team did you play for?</p>
+        </div>
+      </div>
+      <br />
       <Field
         name="test"
         type="button"
@@ -18,7 +30,7 @@ const MockupFormSport = (props) => {
       >
         Men's Basketball
       </Field>
-      <br />
+      <hr />
       <Field
         name="test"
         type="button"
@@ -28,7 +40,7 @@ const MockupFormSport = (props) => {
       >
         Women's Basketball
       </Field>
-      <br />
+      <hr />
       <Field
         name="test"
         type="button"
@@ -38,7 +50,7 @@ const MockupFormSport = (props) => {
       >
         Men's Soccer
       </Field>
-      <br />
+      <hr />
       <Field
         name="test"
         type="button"
@@ -48,7 +60,7 @@ const MockupFormSport = (props) => {
       >
         Women's Soccer
       </Field>
-      <br />
+      <hr />
       <Field
         name="test"
         type="button"
@@ -58,7 +70,7 @@ const MockupFormSport = (props) => {
       >
         Baseball
       </Field>
-      <br />
+      <hr />
       <Field
         name="test"
         type="button"
@@ -68,7 +80,7 @@ const MockupFormSport = (props) => {
       >
         Softball
       </Field>
-      <br />
+      <hr />
       <Field
         name="test"
         type="button"
@@ -78,7 +90,7 @@ const MockupFormSport = (props) => {
       >
         Football
       </Field>
-      <br />
+      <hr />
       <Field
         name="test"
         type="button"
@@ -88,7 +100,7 @@ const MockupFormSport = (props) => {
       >
         Women's Volleyball
       </Field>
-      <br />
+      <hr />
       <div className="row">
         <button
           type="button"
