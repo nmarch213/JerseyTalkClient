@@ -33,21 +33,23 @@ class MockupFormFacility extends Component {
       return <div>Loading...</div>;
     }
     return (
-      <div className="container-fluid form-control">
+      <div className="">
         <form onSubmit={handleSubmit}>
           <div className="row text-center">
-            <div className="container">
+            <div className="container offset-2 col-4">
               <img
                 alt="school Logo"
                 id="mockupSchoolLogo"
-                src="http://img.clipartall.com/building-clip-art-clip-art-of-school-600_307.png"
+                src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
               />
             </div>
-            <div className="container">
+            <div className="container pull-2 col-5 center">
               <h1>Grade The Facility</h1>
-              <p>Atheltics Facility</p>
+              <p>Atheltic Facilities</p>
             </div>
           </div>
+
+          <br />
 
           <div className="row">
             <h4 className="col-6">Main Arena</h4>

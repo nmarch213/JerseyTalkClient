@@ -33,24 +33,24 @@ class MockupFormFifthPage extends Component {
       return <div>Loading...</div>;
     }
     return (
-      <div className="container-fluid form-control">
-        <form onSubmit={handleSubmit}>
-          <div className="row text-center">
-            <div className="container">
-              <img
-                alt="school Logo"
-                id="mockupSchoolLogo"
-                src="http://img.clipartall.com/building-clip-art-clip-art-of-school-600_307.png"
-              />
-            </div>
+      <form onSubmit={handleSubmit}>
+        <div className="row text-center">
+          <div className="container col-4">
+            <img
+              alt="school Logo"
+              id="mockupSchoolLogo"
+              src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
+            />
           </div>
-          <h1>Submission to Complete!</h1>
-          <p>Thank you for contributing to your community!</p>
-          <div>
-            <button type="submit" className="next btn btn-primary">Submit!</button>
-          </div>
-        </form>
-      </div>
+        </div>
+
+        <br />
+        <h1>Submission to Complete!</h1>
+        <p>Thank you for contributing to your community!</p>
+        <div>
+          <button type="submit" className="next btn btn-primary">Submit!</button>
+        </div>
+      </form>
     );
   }
 }
