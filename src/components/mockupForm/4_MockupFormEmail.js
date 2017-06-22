@@ -41,6 +41,9 @@ const MockupFormEmail = (props) => {
         type="email"
         label="Name"
       />
+
+      <br />
+
       <div className="row">
         <button
           type="button"

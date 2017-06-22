@@ -41,6 +41,9 @@ const MockupFormName = (props) => {
         type="text"
         label="Name"
       />
+
+      <br />
+
       <div className="row">
         <button
           type="button"

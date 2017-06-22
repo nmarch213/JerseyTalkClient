@@ -35,7 +35,7 @@ class MockupFormFifthPage extends Component {
     return (
       <form onSubmit={handleSubmit}>
         <div className="row text-center">
-          <div className="container col-4">
+          <div className="container">
             <img
               alt="school Logo"
               id="mockupSchoolLogo"

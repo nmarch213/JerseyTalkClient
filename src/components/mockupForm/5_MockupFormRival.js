@@ -39,7 +39,7 @@ let MockupFormRival = (props) => {
         </div>
       </div>
 
-      <br />
+      <hr />
       <Field
         name="test"
         type="button"
@@ -49,7 +49,7 @@ let MockupFormRival = (props) => {
       >
         Valdosta State Blazers
       </Field>
-      <br />
+      <hr />
       <Field
         name="test"
         type="button"
@@ -59,7 +59,7 @@ let MockupFormRival = (props) => {
       >
         Delta State Statesmen
       </Field>
-      <br />
+      <hr />
       <Field
         name="test"
         type="button"
@@ -69,7 +69,7 @@ let MockupFormRival = (props) => {
       >
         Alabama Huntsville Chargers
       </Field>
-      <br />
+      <hr />
       <Field
         name="test"
         type="button"
@@ -79,7 +79,7 @@ let MockupFormRival = (props) => {
       >
         West Georgia Wolves
       </Field>
-      <br />
+      <hr />
       <Field
         name="test"
         type="button"
@@ -89,7 +89,7 @@ let MockupFormRival = (props) => {
       >
         West Alabama Tigers
       </Field>
-      <br />
+      <hr />
       <div className="row">
         <button
           type="button"
