@@ -19,7 +19,7 @@ class MockupFormSchool extends Component {
         <div className="container">
           <div className="progressBar">
             <p className="right-align">0%</p>
-            <Line percent="10" strokeWidth="3" strokeColor="#26cc63" />
+            <Line percent="1" strokeWidth="3" strokeColor="#26cc63" />
           </div>
           <div className="row hide-on-small-and-down valign-wrapper">
             <div className="col s3 center-align">

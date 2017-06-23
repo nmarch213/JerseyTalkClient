@@ -14,7 +14,11 @@ export default class Footer extends Component {
 
     return (
       <footer className="footer-bottom">
-
+        <div className="footer-copyright">
+          <div className="container center-align">
+          © 2017 JerseyTalk
+          </div>
+        </div>
       </footer>
     );
   }
