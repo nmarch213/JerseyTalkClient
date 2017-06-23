@@ -41,90 +41,100 @@ const MockupFormSport = (props) => {
           </div>
         </div>
         <hr />
-        <div className="container col">
-          <div className="row">
-            <Field
-              name="test"
-              type="button"
-              component="button"
-              label="Men's Basketball"
-              className="btn left sportButton"
-            >
-              Men's Basketball
-            </Field>
-            <Field
-              name="test"
-              type="button"
-              component="button"
-              label="Men's Basketball"
-              className="btn right sportButton"
-            >
-              Women's Basketball
-            </Field>
+        <div className="container">
+          <div className="col s4">
+            <div className="row center-align">
+              <Field
+                name="test"
+                type="button"
+                component="button"
+                label="Men's Basketball"
+                className="btn sportButton"
+              >
+                Men's Basketball
+              </Field>
+            </div>
+            <div className="row center-align">
+              <Field
+                name="test"
+                type="button"
+                component="button"
+                label="Men's Basketball"
+                className="btn sportButton"
+              >
+                Women's Basketball
+              </Field>
+            </div>
+            <div className="row center-align">
+              <Field
+                name="test"
+                type="button"
+                component="button"
+                label="Men's Basketball"
+                className="btn sportButton"
+              >
+                Men's Soccer
+              </Field>
+            </div>
+            <div className="row center-align">
+              <Field
+                name="test"
+                type="button"
+                component="button"
+                label="Men's Basketball"
+                className="btn sportButton"
+              >
+                Women's Soccer
+              </Field>
+            </div>
           </div>
-          <div className="row">
+        <div className="col s4">
+          <div className="row center-align">
             <Field
               name="test"
               type="button"
               component="button"
               label="Men's Basketball"
-              className="btn left sportButton"
-            >
-              Men's Soccer
-            </Field>
-            <Field
-              name="test"
-              type="button"
-              component="button"
-              label="Men's Basketball"
-              className="btn right sportButton"
-            >
-              Women's Soccer
-            </Field>
-          </div>
-        </div>
-        <div className="container col">
-          <div className="row">
-            <Field
-              name="test"
-              type="button"
-              component="button"
-              label="Men's Basketball"
-              className="btn left sportButton"
+              className="btn sportButton"
             >
               Baseball
             </Field>
+          </div>
+          <div className="row center-align">
             <Field
               name="test"
               type="button"
               component="button"
               label="Men's Basketball"
-              className="btn right sportButton"
+              className="btn sportButton"
             >
               Softball
             </Field>
           </div>
-          <div className="row">
+          <div className="row center-align">
             <Field
               name="test"
               type="button"
               component="button"
               label="Men's Basketball"
-              className="btn left sportButton"
+              className="btn sportButton"
             >
               Football
             </Field>
+          </div>
+          <div className="row center-align">
             <Field
               name="test"
               type="button"
               component="button"
               label="Men's Basketball"
-              className="btn right sportButton"
+              className="btn sportButton"
             >
               Women's Volleyball
             </Field>
           </div>
         </div>
+      </div>
         <hr />
         <div className="row">
           <button
