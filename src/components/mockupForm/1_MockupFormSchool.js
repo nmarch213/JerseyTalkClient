@@ -16,52 +16,58 @@ class MockupFormSchool extends Component {
 
     return (
       <form onSubmit={handleSubmit}>
-        <div className="container form-container">
-          <div className="offset-4 col-4 progressBar">
+        <div className="container">
+          <div className="progressBar">
             <p>0%</p>
             <Line percent="0" strokeWidth="5" strokeColor="#26cc63" />
           </div>
-          <div className="row text-center hidden-sm-down">
-            <div className="container offset-2 col-4">
+          <div className="row hide-on-small-and-down valign-wrapper">
+            <div className="col s3 center-align">
               <img
                 alt="school Logo"
                 id="mockupSchoolLogo"
                 src="http://img.clipartall.com/building-clip-art-clip-art-of-school-600_307.png"
               />
             </div>
-            <div className="container pull-1 col-6 form-header">
+            <div className="col s9 center-align">
               <h1>Select Your School</h1>
-              <p>What school did you attend?</p>
+              <h5>What school did you attend?</h5>
             </div>
           </div>
 
-          <div className="row text-center hidden-md-up">
-            <div className="container">
+          <div className="container hide-on-med-and-up center-align">
+            <div className="row">
               <img
                 alt="school Logo"
                 id="mockupSchoolLogo"
                 src="http://img.clipartall.com/building-clip-art-clip-art-of-school-600_307.png"
               />
             </div>
-            <div className="container">
+            <div className="row">
               <h1>Select Your School</h1>
-              <p>What school did you attend?</p>
+              <h5>What school did you attend?</h5>
             </div>
           </div>
+
 
           <br />
-          <div className="input-field">
+          <div className="input-field col s4">
             <Field
               name="school"
-              className="validate"
+              className="validate z-depth-4"
               component="input"
               type="text"
             />
-            <label htmlFor="school">Enter School Name</label>
+            <label htmlFor="school center-text">Enter School Name</label>
           </div>
           <br />
-          <div>
-            <button type="submit" className="next btn btn-primary">Next</button>
+          <div className="center">
+            <button
+              type="submit"
+              className="next btn waves-effect waves-light z-depth-4"
+            >
+              Next <i className="fa fa-angle-double-right" aria-hidden="true" />
+            </button>
           </div>
         </div>
       </form>
