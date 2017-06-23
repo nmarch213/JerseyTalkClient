@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field, reduxForm, formValueSelector } from 'redux-form';
+import { Line } from 'rc-progress';
 import { connect } from 'react-redux';
 import validate from './validate';
 
@@ -11,94 +12,109 @@ let MockupFormRival = (props) => {
   const { handleSubmit, previousPage } = props;
   return (
     <form onSubmit={handleSubmit}>
-      <div className="row text-center hidden-sm-down">
-        <div className="container offset-2 col-4">
-          <img
-            alt="school Logo"
-            id="mockupSchoolLogo"
-            src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
-          />
+      <div className="container">
+        <div className="progressBar">
+          <p className="right-align">50%</p>
+          <Line percent="50" strokeWidth="3" strokeColor="#26cc63" />
         </div>
-        <div className="container pull-2 col-5 center">
-          <h1>University of West Florida</h1>
-          <p>Select the toughest place to play in conference</p>
+        <div className="row hide-on-small-and-down valign-wrapper">
+          <div className="col s3 center-align">
+            <img
+              alt="school Logo"
+              id="mockupSchoolLogo"
+              src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
+            />
+          </div>
+          <div className="col s9 center-align">
+            <h1>University of West Florida</h1>
+            <h5>Select your Conference Rival</h5>
+          </div>
         </div>
-      </div>
 
-      <div className="row text-center hidden-md-up">
-        <div className="container">
-          <img
-            alt="school Logo"
-            id="mockupSchoolLogo"
-            src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
-          />
+        <div className="container hide-on-med-and-up center-align">
+          <div className="row">
+            <img
+              alt="school Logo"
+              id="mockupSchoolLogo"
+              src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
+            />
+          </div>
+          <div className="row">
+            <h4>University of West Florida</h4>
+            <p className="center-align">Select your Conference Rival</p>
+          </div>
         </div>
+        <hr />
         <div className="container">
-          <h1>University of West Florida</h1>
-          <p>Select the toughest place to play in conference</p>
+          <div className="col s4">
+            <div className="row center-align">
+              <Field
+                name="test"
+                type="button"
+                component="button"
+                label="Men's Basketball"
+                className="btn rivalButton"
+              >
+                Valdosta State Blazers
+              </Field>
+            </div>
+            <div className="row center-align">
+              <Field
+                name="test"
+                type="button"
+                component="button"
+                label="Men's Basketball"
+                className="btn rivalButton"
+              >
+                Delta State Statesmen
+              </Field>
+            </div>
+            <div className="row center-align">
+              <Field
+                name="test"
+                type="button"
+                component="button"
+                label="Men's Basketball"
+                className="btn rivalButton"
+              >
+                Alabama Huntsville Chargers
+              </Field>
+            </div>
+            <div className="row center-align">
+              <Field
+                name="test"
+                type="button"
+                component="button"
+                label="Men's Basketball"
+                className="btn rivalButton"
+              >
+                West Georgia Wolves
+              </Field>
+            </div>
+            <div className="row center-align">
+              <Field
+                name="test"
+                type="button"
+                component="button"
+                label="Men's Basketball"
+                className="btn rivalButton"
+              >
+                West Alabama Tigers
+              </Field>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <hr />
-      <Field
-        name="test"
-        type="button"
-        component="button"
-        label="Valdosta State Blazers"
-        className="form-control btn btn-outline-secondary"
-      >
-        Valdosta State Blazers
-      </Field>
-      <hr />
-      <Field
-        name="test"
-        type="button"
-        component="button"
-        label="Delta State Statesmen"
-        className="form-control btn btn-outline-secondary"
-      >
-        Delta State Statesmen
-      </Field>
-      <hr />
-      <Field
-        name="test"
-        type="button"
-        component="button"
-        label="Alabama Huntsville Chargers"
-        className="form-control btn btn-outline-secondary"
-      >
-        Alabama Huntsville Chargers
-      </Field>
-      <hr />
-      <Field
-        name="test"
-        type="button"
-        component="button"
-        label="West Georgia Wolves"
-        className="form-control btn btn-outline-secondary"
-      >
-        West Georgia Wolves
-      </Field>
-      <hr />
-      <Field
-        name="test"
-        type="button"
-        component="button"
-        label="West Alabama Tigers"
-        className="form-control btn btn-outline-secondary"
-      >
-        West Alabama Tigers
-      </Field>
-      <hr />
-      <div className="row">
-        <button
-          type="button"
-          className="btn btn-outline-success previous form-control col-6"
-          onClick={previousPage}
-        >
-          Previous
-        </button>
-        <button type="submit" className="btn btn-success next form-control col-6">Next</button>
+        <hr />
+        <div className="row">
+          <button
+            type="button"
+            className="btn btn-outline-success previous  col-6"
+            onClick={previousPage}
+          >
+            Previous
+          </button>
+          <button type="submit" className="btn right next">Next</button>
+        </div>
       </div>
     </form>
   );

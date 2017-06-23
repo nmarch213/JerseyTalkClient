@@ -104,6 +104,10 @@ body {
   width: 17em;
 }
 
+.rivalButton {
+  width: 22em;
+}
+
 .nav-link {
   margin-right: 2em;
   margin-left: 2em;
