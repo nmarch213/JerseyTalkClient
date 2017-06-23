@@ -23,6 +23,7 @@ const MockupFormName = (props) => {
           </div>
           <div className="col s9 center-align">
             <h1>What is your name?</h1>
+            <h5>Your information will not display</h5>
           </div>
         </div>
 
@@ -36,6 +37,7 @@ const MockupFormName = (props) => {
           </div>
           <div className="row">
             <h4>What is your name?</h4>
+            <p className="align-center">Your information will not display</p>
           </div>
         </div>
         <div className="input-field col s4">

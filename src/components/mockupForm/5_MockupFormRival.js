@@ -6,16 +6,13 @@ import validate from './validate';
 
 
 let MockupFormRival = (props) => {
-  const {
-    sportChosen,
-  } = props;
   const { handleSubmit, previousPage } = props;
   return (
     <form onSubmit={handleSubmit}>
       <div className="container">
         <div className="progressBar">
-          <p className="right-align">50%</p>
-          <Line percent="50" strokeWidth="3" strokeColor="#26cc63" />
+          <p className="right-align">40%</p>
+          <Line percent="40" strokeWidth="3" strokeColor="#26cc63" />
         </div>
         <div className="row hide-on-small-and-down valign-wrapper">
           <div className="col s3 center-align">

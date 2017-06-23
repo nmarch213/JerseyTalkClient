@@ -51,7 +51,7 @@ class MockupFormSchool extends Component {
 
 
           <br />
-          <div className="input-field col s4">
+          <div className="input-field container">
             <Field
               name="school"
               className="validate z-depth-4"

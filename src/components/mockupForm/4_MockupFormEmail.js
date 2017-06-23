@@ -5,7 +5,7 @@ import validate from './validate';
 
 
 const MockupFormEmail = (props) => {
-  const { handleSubmit, pristine, previousPage, submitting } = props;
+  const { handleSubmit, previousPage } = props;
   return (
     <form onSubmit={handleSubmit}>
       <div className="container">
@@ -23,6 +23,7 @@ const MockupFormEmail = (props) => {
           </div>
           <div className="col s9 center-align">
             <h1>What is your Email?</h1>
+            <h5>To verify your identity</h5>
           </div>
         </div>
 
@@ -36,6 +37,7 @@ const MockupFormEmail = (props) => {
           </div>
           <div className="row">
             <h4>What is your Email?</h4>
+            <p className="center-align">To verify your identity</p>
           </div>
         </div>
         <div className="input-field col s4">

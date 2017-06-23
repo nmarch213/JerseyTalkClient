@@ -1,11 +1,9 @@
-import _ from 'lodash';
+import { Line } from 'rc-progress';
 import StarRatingComponent from 'react-star-rating-component';
 import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
-import { connect } from 'react-redux';
+import { reduxForm } from 'redux-form';
 
 import validate from './validate';
-import renderField from './renderField';
 
 class MockupFormCoach extends Component {
   constructor() {
@@ -34,95 +32,114 @@ class MockupFormCoach extends Component {
     }
     return (
       <form onSubmit={handleSubmit}>
-        <div className="row text-center hidden-sm-down">
-          <div className="container offset-2 col-4">
-            <img
-              alt="school Logo"
-              id="mockupSchoolLogo"
-              src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
+        <div className="container">
+          <div className="progressBar">
+            <p className="right-align">50%</p>
+            <Line percent="50" strokeWidth="3" strokeColor="#26cc63" />
+          </div>
+          <div className="row hide-on-small-and-down valign-wrapper">
+            <div className="col s3 center-align">
+              <img
+                alt="school Logo"
+                id="mockupSchoolLogo"
+                src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
+              />
+            </div>
+            <div className="col s9 center-align">
+              <h1>Grade your Head Coach</h1>
+              <h5>Bob Stinnet</h5>
+            </div>
+          </div>
+          <div className="container hide-on-med-and-up center-align">
+            <div className="row">
+              <img
+                alt="school Logo"
+                id="mockupSchoolLogo"
+                src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
+              />
+            </div>
+            <div className="row">
+              <h4>Grade your Head Coach</h4>
+              <p className="center-align">Bob Stinnet</p>
+            </div>
+          </div>
+          <hr />
+          <div className="row">
+            <div className="col s6">
+              <h4>Recruiting</h4>
+              <p>Ability to sign talented athletes to the program</p>
+            </div>
+            <StarRatingComponent
+              name="rate1"
+              className="col s6 center-align"
+              starCount={5}
+              value={rating}
+              onStarClick={this.onStarClick.bind(this)}
             />
           </div>
-          <div className="container pull-2 col-5 center">
-            <h1>Grade Your Head Coach</h1>
-            <p>Bob Stinnett</p>
-          </div>
-        </div>
-
-        <div className="row text-center hidden-md-up">
-          <div className="container">
-            <img
-              alt="school Logo"
-              id="mockupSchoolLogo"
-              src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
+          <div className="row">
+            <div className="col s6">
+              <h4>Relationship with Players</h4>
+              <p>Ability to develope relationships with players</p>
+            </div>
+            <StarRatingComponent
+              name="rate1"
+              starCount={5}
+              className="col s6 center-align"
+              value={rating}
+              onStarClick={this.onStarClick.bind(this)}
             />
           </div>
-          <div className="container">
-            <h1>Grade Your Head Coach</h1>
-            <p>Bob Stinnett</p>
+          <div className="row">
+            <div className="col s6">
+              <h4>Knowledge of Sport</h4>
+              <p>Understanding of the Game</p>
+            </div>
+            <StarRatingComponent
+              name="rate1"
+              starCount={5}
+              className="col s6 center-align"
+              value={rating}
+              onStarClick={this.onStarClick.bind(this)}
+            />
           </div>
-        </div>
-
-        <br />
-
-        <div className="row">
-          <h4 className="col-6">Recruiting</h4>
-          <StarRatingComponent
-            name="rate1"
-            className="col-6"
-            starCount={5}
-            value={rating}
-            onStarClick={this.onStarClick.bind(this)}
-          />
-        </div>
-        <div className="row">
-          <h4 className="col-6">Relationship with Players</h4>
-          <StarRatingComponent
-            name="rate1"
-            starCount={5}
-            className="col-6"
-            value={rating}
-            onStarClick={this.onStarClick.bind(this)}
-          />
-        </div>
-        <div className="row">
-          <h4 className="col-6">Knowledge of the Sport</h4>
-          <StarRatingComponent
-            name="rate1"
-            className="col-6"
-            starCount={5}
-            value={rating}
-            onStarClick={this.onStarClick.bind(this)}
-          />
-        </div>
-        <div className="row">
-          <h4 className="col-6">Player Development</h4>
-          <StarRatingComponent
-            className="col-6"
-            name="rate1"
-            starCount={5}
-            value={rating}
-            onStarClick={this.onStarClick.bind(this)}
-          />
-        </div>
-        <div className="row">
-          <h4 className="col-6">Program Tradition</h4>
-          <StarRatingComponent
-            className="col-6"
-            name="rate1"
-            starCount={5}
-            value={rating}
-            onStarClick={this.onStarClick.bind(this)}
-          />
-        </div>
-        <div className="row">
-          <button
-            type="button"
-            className="btn btn-outline-success previous form-control col-6"
-            onClick={previousPage}
-          >
-            Previous
-          </button>
-          <button type="submit" className="btn btn-success next form-control col-6">Next</button>
+          <div className="row">
+            <div className="col s6">
+              <h4>Player Development</h4>
+              <p>Ability to develope skills of players</p>
+            </div>
+            <StarRatingComponent
+              name="rate1"
+              starCount={5}
+              className="col s6 center-align"
+              value={rating}
+              onStarClick={this.onStarClick.bind(this)}
+            />
+          </div>
+          <div className="row">
+            <div className="col s6">
+              <h4>Program Tradition</h4>
+              <p>Culture and history of program</p>
+            </div>
+            <StarRatingComponent
+              name="rate1"
+              starCount={5}
+              className="col s6 center-align"
+              value={rating}
+              onStarClick={this.onStarClick.bind(this)}
+            />
+          </div>
+          <hr />
+          <div className="row">
+            <button
+              type="button"
+              className="btn previous"
+              onClick={previousPage}
+            >
+              Previous
+            </button>
+            <button type="submit" className="btn right next">Next</button>
+          </div>
         </div>
       </form>
     );
