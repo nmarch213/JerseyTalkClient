@@ -25,6 +25,38 @@ const MockupFormName = (props) => {
             <h1>What is your name?</h1>
           </div>
         </div>
+
+        <div className="container hide-on-med-and-up center-align">
+          <div className="row">
+            <img
+              alt="school Logo"
+              id="mockupSchoolLogo"
+              src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
+            />
+          </div>
+          <div className="row">
+            <h1>What is your name?</h1>
+          </div>
+        </div>
+        <div className="input-field col s4">
+          <Field
+            name="school"
+            className="validate z-depth-4"
+            component="input"
+            type="text"
+          />
+          <label htmlFor="school center-text">Enter School Name</label>
+        </div>
+        <div className="row">
+          <button
+            type="button"
+            className="btn btn-outline-success previous  col-6"
+            onClick={previousPage}
+          >
+            Previous
+          </button>
+          <button type="submit" className="btn right next">Next</button>
+        </div>
       </div>
     </form>
   );
