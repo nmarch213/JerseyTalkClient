@@ -27,10 +27,21 @@ export default class NavBar extends Component {
                 className="brand-logo"
               >
                 <img
-                  className="navbar-brand hidden-sm-down"
+                  className="navbar-brand hide-on-small-and-down"
                   src="/src/images/logo/Jerseytalk-logo-half-jerseyWHITE.png"
                   alt="JerseyTalk Logo"
                   id="logo"
+                />
+              </NavLink>
+              <NavLink
+                to="#!"
+                className="brand-logo"
+              >
+                <img
+                  className="navbar-brand hide-on-med-and-up"
+                  src="/src/images/logo/test-logo.png"
+                  alt="JerseyTalk Logo"
+                  id="smalllogo"
                 />
               </NavLink>
               <NavLink
