@@ -18,67 +18,60 @@ export default class NavBar extends Component {
     // const { location } = this.props;
 
     return (
-      <nav className="navbar navbar-static-top navbar-toggleable-md navbar-inverse" id="navbarMain">
-        <button
-          className="navbar-toggler navbar-toggler-left"
-          data-toggle="collapse"
-          data-target="#navbarContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i className="fa fa-bars" aria-hidden="true" />
-        </button>
-        <img
-          className="navbar-brand hidden-md-up"
-          src="/src/images/logo/test-logo.png"
-          alt="JerseyTalk Logo"
-          id="smalllogo"
-        />
-        <img
-          className="navbar-brand hidden-sm-down"
-          src="/src/images/logo/Jerseytalk-logo-half-jerseyWHITE.png"
-          alt="JerseyTalk Logo"
-          id="logo"
-        />
-        <div className="collapse navbar-collapse" id="navbarContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
+      <div>
+        <nav id="navbarMain">
+          <div className="container">
+            <div className="nav-wrapper">
               <NavLink
-                to="/"
-                className="nav-link"
+                to="#!"
+                className="brand-logo"
               >
-                HOME
+                <img
+                  className="navbar-brand hidden-sm-down"
+                  src="/src/images/logo/Jerseytalk-logo-half-jerseyWHITE.png"
+                  alt="JerseyTalk Logo"
+                  id="logo"
+                />
               </NavLink>
-            </li>
-            <li className="nav-item">
               <NavLink
-                to="/review"
-                className="nav-link"
+                to="#"
+                data-activates="mobile-demo"
+                className="button-collapse"
               >
-                WRITE REVIEW
+                <i className="material-icons">menu</i>
               </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/about-us"
-                className="nav-link"
-              >
-                ABOUT
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                to="/contact-us"
-                className="nav-link"
-              >
-                CONTACT
-              </NavLink>
-
-            </li>
-          </ul>
-        </div>
-      </nav>
+              <ul className="right hide-on-med-and-down">
+                <li className="nav-link">
+                  <NavLink to="/">HOME</NavLink>
+                </li>
+                <li className="nav-link">
+                  <NavLink to="/review">WRITE REVIEW</NavLink>
+                </li>
+                <li className="nav-link">
+                  <NavLink to="/about-us">ABOUT</NavLink>
+                </li>
+                <li className="nav-link">
+                  <NavLink to="/contact-us">CONTACT</NavLink>
+                </li>
+              </ul>
+              <ul className="side-nav" id="mobile-demo">
+                <li>
+                  <NavLink to="/">HOME</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/review">WRITE REVIEW</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/about-us">ABOUT</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/contact-us">CONTACT</NavLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
     );
   }
 }

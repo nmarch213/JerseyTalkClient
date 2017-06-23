@@ -6,6 +6,11 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
   font-family: 'Rubik', sans-serif;
+
+  background: #E0EAFC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .footer-bottom {
@@ -39,7 +44,7 @@ body {
 }
 
 #mockupSchoolLogo {
-  height: 150px;
+  height: 125px;
   width: 150px;
 }
 
@@ -58,9 +63,9 @@ body {
 }
 
 #logo {
-  height: 60px;
+  height: 50px;
   width: 275px;
-  margin: auto;
+  margin: .15em;
 }
 
 #smalllogo {
@@ -80,6 +85,24 @@ body {
   margin:auto;
 }
 
+.form-header {
+  margin-top: auto;
+}
+
+.form-container {
+  min-height: 600px !important;
+  width: 50em !important;
+}
+
+.progressBar {
+  margin: auto !important;
+  padding-bottom: : 2em !important;
+}
+
+.nav-link {
+  margin-right: 2em;
+  margin-left: 2em;
+}
 
 
 

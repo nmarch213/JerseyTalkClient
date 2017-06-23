@@ -18,7 +18,7 @@
   "author": "Nicholas March",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.69.0",
+    "aws-sdk": "^2.76.0",
     "axios": "^0.16.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
@@ -32,8 +32,10 @@
     "cors": "^2.8.3",
     "express": "^4.15.3",
     "lodash": "^4.17.4",
+    "materialize-css": "^0.99.0",
     "mongoose": "^4.10.1",
     "nodemon": "^1.11.0",
+    "rc-progress": "^2.1.2",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4",
@@ -53,9 +55,9 @@
     "eslint-config-airbnb": "^15.0.1",
     "eslint-config-rallycoding": "^3.2.0",
     "eslint-plugin-babel": "^4.1.1",
-    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-import": "^2.5.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-react": "^7.0.1",
-    "webpack-dev-server": "^2.4.5"
+    "eslint-plugin-react": "^7.1.0",
+    "webpack-dev-server": "^2.5.0"
   }
 }
