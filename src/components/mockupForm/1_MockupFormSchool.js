@@ -18,8 +18,8 @@ class MockupFormSchool extends Component {
       <form onSubmit={handleSubmit}>
         <div className="container">
           <div className="progressBar">
-            <p>0%</p>
-            <Line percent="0" strokeWidth="5" strokeColor="#26cc63" />
+            <p className="right-align">0%</p>
+            <Line percent="10" strokeWidth="3" strokeColor="#26cc63" />
           </div>
           <div className="row hide-on-small-and-down valign-wrapper">
             <div className="col s3 center-align">

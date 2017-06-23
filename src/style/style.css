@@ -85,6 +85,10 @@ body {
   margin:auto;
 }
 
+.sportButton {
+  width: 17em;
+}
+
 .form-header {
   margin-top: auto;
 }

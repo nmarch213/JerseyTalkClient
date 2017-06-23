@@ -9,124 +9,132 @@ const MockupFormSport = (props) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="container form-container">
-        <p>Progress</p>
-        <Line percent="20" strokeWidth="10" strokeColor="green" />
-        <div className="row text-center hidden-sm-down">
-          <div className="container offset-2 col-4">
+        <div className="progressBar">
+          <p className="right-align">10%</p>
+          <Line percent="10" strokeWidth="3" strokeColor="#26cc63" />
+        </div>
+        <div className="row hide-on-small-and-down valign-wrapper">
+          <div className="col s3 center-align">
             <img
               alt="school Logo"
               id="mockupSchoolLogo"
               src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
             />
           </div>
-          <div className="container pull-2 col-5 center">
+          <div className="col s9 center-align">
             <h1>Select Your Team</h1>
-            <p>What team did you play for?</p>
+            <h5>What team did you play for?</h5>
           </div>
         </div>
-        <div className="row text-center hidden-md-up">
-          <div className="container">
+
+        <div className="container hide-on-med-and-up center-align">
+          <div className="row">
             <img
               alt="school Logo"
               id="mockupSchoolLogo"
               src="https://upload.wikimedia.org/wikipedia/en/8/88/West_Florida_Argos_logo.png"
             />
           </div>
-          <div className="container">
+          <div className="row">
             <h1>Select Your Team</h1>
-            <p>What team did you play for?</p>
+            <h5>What team did you play for?</h5>
           </div>
         </div>
-        <br />
-        <Field
-          name="test"
-          type="button"
-          component="button"
-          label="Men's Basketball"
-          className="form-control btn btn-outline-secondary"
-        >
-          Men's Basketball
-        </Field>
         <hr />
-        <Field
-          name="test"
-          type="button"
-          component="button"
-          label="Men's Basketball"
-          className="form-control btn btn-outline-secondary"
-        >
-          Women's Basketball
-        </Field>
-        <hr />
-        <Field
-          name="test"
-          type="button"
-          component="button"
-          label="Men's Basketball"
-          className="form-control btn btn-outline-secondary"
-        >
-          Men's Soccer
-        </Field>
-        <hr />
-        <Field
-          name="test"
-          type="button"
-          component="button"
-          label="Men's Basketball"
-          className="form-control btn btn-outline-secondary"
-        >
-          Women's Soccer
-        </Field>
-        <hr />
-        <Field
-          name="test"
-          type="button"
-          component="button"
-          label="Men's Basketball"
-          className="form-control btn btn-outline-secondary"
-        >
-          Baseball
-        </Field>
-        <hr />
-        <Field
-          name="test"
-          type="button"
-          component="button"
-          label="Men's Basketball"
-          className="form-control btn btn-outline-secondary"
-        >
-          Softball
-        </Field>
-        <hr />
-        <Field
-          name="test"
-          type="button"
-          component="button"
-          label="Men's Basketball"
-          className="form-control btn btn-outline-secondary"
-        >
-          Football
-        </Field>
-        <hr />
-        <Field
-          name="test"
-          type="button"
-          component="button"
-          label="Men's Basketball"
-          className="form-control btn btn-outline-secondary"
-        >
-          Women's Volleyball
-        </Field>
+        <div className="container col">
+          <div className="row">
+            <Field
+              name="test"
+              type="button"
+              component="button"
+              label="Men's Basketball"
+              className="btn left sportButton"
+            >
+              Men's Basketball
+            </Field>
+            <Field
+              name="test"
+              type="button"
+              component="button"
+              label="Men's Basketball"
+              className="btn right sportButton"
+            >
+              Women's Basketball
+            </Field>
+          </div>
+          <div className="row">
+            <Field
+              name="test"
+              type="button"
+              component="button"
+              label="Men's Basketball"
+              className="btn left sportButton"
+            >
+              Men's Soccer
+            </Field>
+            <Field
+              name="test"
+              type="button"
+              component="button"
+              label="Men's Basketball"
+              className="btn right sportButton"
+            >
+              Women's Soccer
+            </Field>
+          </div>
+        </div>
+        <div className="container col">
+          <div className="row">
+            <Field
+              name="test"
+              type="button"
+              component="button"
+              label="Men's Basketball"
+              className="btn left sportButton"
+            >
+              Baseball
+            </Field>
+            <Field
+              name="test"
+              type="button"
+              component="button"
+              label="Men's Basketball"
+              className="btn right sportButton"
+            >
+              Softball
+            </Field>
+          </div>
+          <div className="row">
+            <Field
+              name="test"
+              type="button"
+              component="button"
+              label="Men's Basketball"
+              className="btn left sportButton"
+            >
+              Football
+            </Field>
+            <Field
+              name="test"
+              type="button"
+              component="button"
+              label="Men's Basketball"
+              className="btn right sportButton"
+            >
+              Women's Volleyball
+            </Field>
+          </div>
+        </div>
         <hr />
         <div className="row">
           <button
             type="button"
-            className="btn btn-outline-success previous form-control col-6"
+            className="btn btn-outline-success previous  col-6"
             onClick={previousPage}
           >
             Previous
           </button>
-          <button type="submit" className="btn btn-success next form-control col-6">Next</button>
+          <button type="submit" className="btn right next">Next</button>
         </div>
       </div>
     </form>

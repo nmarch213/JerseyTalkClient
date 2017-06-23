@@ -48,7 +48,7 @@ class MockupForm extends Component {
             school={school}
             onSubmit={this.nextPage}
           />}
-          {page === 2 &&
+          {page === 1 &&
             <MockupFormSport
               school={school}
               previousPage={this.previousPage}
