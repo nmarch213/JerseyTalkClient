@@ -8,7 +8,7 @@ const MockupFormSport = (props) => {
   const { handleSubmit, previousPage } = props;
   return (
     <form onSubmit={handleSubmit}>
-      <div className="container form-container">
+      <div className="container">
         <div className="progressBar">
           <p className="right-align">10%</p>
           <Line percent="10" strokeWidth="3" strokeColor="#26cc63" />
