@@ -35,7 +35,7 @@ const MockupFormName = (props) => {
             />
           </div>
           <div className="row">
-            <h1>What is your name?</h1>
+            <h4>What is your name?</h4>
           </div>
         </div>
         <div className="input-field col s4">
@@ -45,7 +45,7 @@ const MockupFormName = (props) => {
             component="input"
             type="text"
           />
-          <label htmlFor="school center-text">Enter School Name</label>
+          <label htmlFor="school center-text">Name</label>
         </div>
         <div className="row">
           <button

@@ -36,8 +36,8 @@ const MockupFormSport = (props) => {
             />
           </div>
           <div className="row">
-            <h1>Select Your Team</h1>
-            <h5>What team did you play for?</h5>
+            <h4>Select Your Team</h4>
+            <p className="center-align">What team did you play for?</p>
           </div>
         </div>
         <hr />

@@ -44,8 +44,8 @@ class MockupFormSchool extends Component {
               />
             </div>
             <div className="row">
-              <h1>Select Your School</h1>
-              <h5>What school did you attend?</h5>
+              <h4>Select Your School</h4>
+              <p className="center-align">What school did you attend?</p>
             </div>
           </div>
 
